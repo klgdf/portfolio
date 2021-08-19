@@ -1,2 +1,2 @@
 # Portfolio
-[Mapo]:/portfolio/mapo/
+[Mapo]:https://klgdf.github.io/portfolio/mapo/
