@@ -1,0 +1,258 @@
+{
+  "defaultLanguage": "en",
+  "seo": false,
+  "php": true,
+  "waitplugin": false,
+  "iconplugin": false,
+  "accounts_type": "cold",
+  "googleFonts": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Raleway:wght@700;800&display=swap",
+  "companyData": {
+    "title": "BrokerName",
+    "adres": "Grigori Afxentiou 968/58, Larnaca, Cyprus",
+    "phone": "+357 36 658741",
+    "email": "support@dtt-ma.com",
+    "url": "https://dtt-ma.com",
+    "domain": "dtt-ma.com",
+    "license": {
+      "lls1": "658/38",
+      "lls2": "04/65/HP/22",
+      "lls3": "F36486875"
+    },
+    "loginpage": "login.html",
+    "registratepage": "registration.html"
+  },
+  "brandlinks": {
+    "logo": "assets/images/logo.svg",
+    "altlogo": "assets/images/logo-dark.svg",
+    "favicon": "assets/images/favicon.png"
+  },
+  "javascript": {
+    "default_type_account": "cold",
+    "aos": {
+      "duration": 500
+    },
+    "index_page": {
+      "accounts_type": {
+        "cold": {
+          "account_1": {
+            "price": "$1 000",
+            "leverage": "1:20"
+          },
+          "account_2": {
+            "price": "$25 000",
+            "leverage": "1:50"
+          },
+          "account_3": {
+            "price": "$50 000",
+            "leverage": "1:100"
+          }
+        },
+        "hot": {
+          "account_1": {
+            "price": "$150",
+            "leverage": "1:100"
+          },
+          "account_2": {
+            "price": "$1 000",
+            "leverage": "1:500"
+          },
+          "account_3": {
+            "price": "$10 000",
+            "leverage": "1:500"
+          }
+        }
+      }
+    },
+    "table": {
+      "reservserver": "https://trade.dtt-ma.com:8887/history/quotesnapshot",
+      "table_freq_update": 10000,
+      "accounts_type": {
+        "cold": {
+          "stocks": "1:20",
+          "metals": "1:20",
+          "forex": "1:20",
+          "commodities": "1:20",
+          "index": "1:20",
+          "crypto": "1:20",
+          "etf": "1:20"
+        },
+        "hot": {
+          "stocks": "1:100",
+          "metals": "1:100",
+          "forex": "1:100",
+          "commodities": "1:100",
+          "index": "1:500",
+          "crypto": "1:500",
+          "etf": "1:500"
+        }
+      }
+    },
+    "news": {
+      "number": 9,
+      "imgblock": "assets/images/news.svg",
+      "linkrss": "investing.com/rss/news.rss"
+    },
+    "tradeview": {
+      "instruments": {
+        "forex": "EURUSD",
+        "metals": "GOLD",
+        "stocks": "NASDAQ:AMZN",
+        "commodities": "OIL_BRENT",
+        "index": "CURRENCYCOM:US500",
+        "crypto": "BITSTAMP:BTCUSD"
+      }
+    },
+    "about": {
+      "duration": 1500
+    },
+    "forms": {
+      "sha": "0000",
+      "methods": {
+        "createacc": "CreateUserAndAccounts",
+        "createtoken": "CreateToken",
+        "reset": "ResetPassword"
+      }
+    }
+  },
+  "build": {
+    "contentfile": "content",
+    "proxy": "localhost",
+    "port": "3000",
+    "links": {
+      "source": {
+        "core": "src",
+        "php": {
+          "windows": {
+            "phpini": "src/php/php.ini",
+            "phpbase": "src/php/php.exe"
+          },
+          "other": {
+            "phpini": "php.ini",
+            "phpbase": "php"
+          }
+        },
+        "assets": {
+          "scss": "src/assets/scss",
+          "js": "src/assets/js",
+          "img": "src/assets/images",
+          "fonts": "src/assets/fonts",
+          "icons": "src/assets/icons",
+          "rss": "src/assets/js/blocks/env"
+        },
+        "csv": "src/csv",
+        "pages": "src/pages",
+        "pug": "src/pug",
+        "icons": {
+          "template": "src/templates/fonts.template.scss",
+          "fontname": "iconfont",
+          "formats": [
+            "ttf",
+            "eot",
+            "woff",
+            "svg"
+          ]
+        },
+        "sender": {
+          "title": "sender.php"
+        },
+        "rssrequest": {
+          "title": "rssrequest.php"
+        },
+        "resources": "src/resources"
+      },
+      "build": {
+        "core": "build",
+        "assets": {
+          "css": "build/assets/css",
+          "js": "build/assets/js",
+          "img": "build/assets/images",
+          "fonts": "build/assets/fonts",
+          "json": "build/assets/json"
+        },
+        "output": {
+          "js": {
+            "vendor": "vendor",
+            "main": "main"
+          }
+        },
+        "input": {
+          "js": {
+            "main": "construct"
+          }
+        }
+      }
+    }
+  },
+  "imagerename": {
+    "numberletters": 30,
+    "possibles": "abcdefghijklmnopqrstuvwxyz0123456789",
+    "formats": [
+      "jpg",
+      "png",
+      "jpeg",
+      "svg",
+      "gif",
+      "webp"
+    ],
+    "nonerename": [
+      "email/logo.png"
+    ]
+  },
+  "robotsfile": {
+    "allow": {
+      "false": [],
+      "true": [
+        "de/",
+        "es/",
+        "fr/",
+        "it/",
+        "ru/",
+        "zh/"
+      ]
+    },
+    "disallow": {
+      "false": [
+        "/",
+        "*?*"
+      ],
+      "true": [
+        "/*.json",
+        "/*.php",
+        "/*.htaccess",
+        "/assets/"
+      ]
+    }
+  },
+  "sitemapfile": {
+    "rel": "sitemap",
+    "freq": "monthly",
+    "hidepage": [
+      "404",
+      "500",
+      "503",
+      "login",
+      "recovery",
+      "registration"
+    ]
+  },
+  "seolocales": {
+    "siteLocale": {
+      "ru": "ru-RU",
+      "en": "en-US",
+      "es": "es-ES",
+      "it": "it-IT",
+      "de": "de-DE",
+      "fr": "fr-FR",
+      "zh": "zh-CN"
+    },
+    "alternatives": [
+      "ru",
+      "en",
+      "es",
+      "it",
+      "de",
+      "zh",
+      "fr"
+    ]
+  }
+}
