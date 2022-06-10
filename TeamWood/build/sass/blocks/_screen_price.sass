@@ -1,0 +1,280 @@
+.price
+  &-button
+    padding: 17px 84px
+    width: max-content
+  &-block
+    display: flex
+    @media (max-width: 991px)
+      flex-direction: column
+    &__left
+      flex: 0 1 620px
+      @media (max-width: 991px)
+        flex: 0 1 100%
+    &__right
+      flex: 0 1 580px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      @media (max-width: 991px)
+        flex: 0 1 100%
+        padding-left: 0
+  &-slider
+    display: none
+    position: relative
+    @media (max-width: 991px)
+      display: block
+    &__title
+      font-size: 18px
+      line-height: 22px
+      +medium
+      padding: 0 18px 14px 18px
+    &__item
+      height: 180px
+      +bg
+      @media (max-width: 991px)
+        display: flex
+        align-items: flex-end
+  &-grid
+    max-width: 540px
+    margin: 0 0 0 auto
+    column-count: 3
+    gap: 10px
+    @media (max-width: 1279px)
+      width: calc(100% - 40px)
+    @media (max-width: 991px)
+      display: none
+    &__title
+      +medium
+      font-size: 18px
+      line-height: 22px
+      padding: 0 20px 16px
+    &__empty
+      &_1
+        height: 121px
+      &_2
+        height: 89px
+      &_3
+        height: 120px
+      &_4
+        height: 203px
+    &__item
+      display: flex
+      background: linear-gradient(360deg, #222222 17.14%, rgba(34, 34, 34, 0) 100%)
+      align-items: flex-end
+      +bg
+      margin-bottom: 10px
+      &_1, &_2, &_6
+        height: 218px
+      &_3
+        height: 150px
+        margin-bottom: 0
+      &_4
+        height: 230px
+      &_5
+        height: 170px
+      &_6
+        margin-bottom: 0
+      &_7
+        height: 404px
+        margin-bottom: 0
+  &-net
+    display: block
+    position: relative
+    margin-top: -88px
+    @media (max-width: 991px)
+      overflow: hidden
+      margin-top: 40px
+    &__note
+      position: absolute
+      bottom: 15px
+      right: 0
+      display: flex
+      align-items: center
+      font-size: 18px
+      line-height: 24px
+      +light
+      @media (max-width: 991px)
+        position: unset
+        font-sixe: 17px
+        line-height: 22px
+        margin: 13px 0 36px
+      &::before
+        content: '*'
+        display: block
+        margin-right: 9px
+    &__more
+      position: absolute
+      bottom: 98px
+      left: -98px
+      height: max-content
+      white-space: nowrap
+      line-height: 24px
+      +medium
+      background: var(--first-text)
+      color: var(--bg)
+      padding: 3px 9px 3px 7px
+      transform: rotate(270deg)
+      @media (max-width: 991px)
+        position: unset
+        transform: none
+        width: max-content
+        margin: 0 0 0 auto
+  &-list
+    margin-bottom: 105px
+    @media (max-width: 991px)
+      margin-bottom: 30px
+    &__title
+      display: flex
+      align-items: center
+      @media (max-width: 767px)
+        align-items: flex-start
+      & span
+        display: block
+        cursor: pointer
+        & svg
+          transition: 0.3s
+          color: var(--third-color)
+          display: block
+          width: 22px
+          height: 22px
+          margin-left: 8px
+          &:hover
+            color: var(--second-text)
+    &__line
+      display: block
+      width: 2px
+      height: auto
+      background: var(--second-text)
+      margin-right: 20px
+      @media (max-width: 767px)
+        margin-right: 15px
+    &__item
+      display: flex
+      background: var(--bg)
+      margin-bottom: 25px
+      @media (max-width: 991px)
+        padding: 0
+      &:last-child
+        margin-bottom: 0
+  &-note
+    max-width: 373px
+    padding: 16px 22px 22px
+    background: var(--bg-blocks)
+    font-size: 18px
+    line-height: 24px
+    +light
+    @media (max-width: 767px)
+      font-size: 17px
+      line-height: 22px
+      max-width: 100%
+    &__item
+      display: flex
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+      &::before
+        content: '*'
+        display: block
+        margin-right: 9px
+
+.price-slider__item, .price-grid__item
+  &_1
+    background-image: url(../img/price_1.webp)
+  &_2
+    background-image: url(../img/price_2.webp)
+  &_3
+    background-image: url(../img/price_3.webp)
+  &_4
+    background-image: url(../img/price_4.webp)
+  &_5
+    background-image: url(../img/price_5.webp)
+  &_6
+    background-image: url(../img/price_6.webp)
+  &_7
+    background-image: url(../img/price_7.webp)
+
+[tooltip]
+  position: relative
+  @media (max-width: 767px)
+    margin-top: 2px
+
+[tooltip]::before,
+[tooltip]::after
+  text-transform: none
+  font-size: 18px
+  line-height: 24px
+  user-select: none
+  pointer-events: none
+  position: absolute
+  display: none
+  opacity: 0
+
+[tooltip]::before
+  content: ''
+  z-index: 1001
+  width: 8px
+  height: 8px
+  transform: rotate(45deg)
+  top: 30px
+  left: 14px
+  background: white
+  @media (max-width: 767px)
+    top: 26px
+
+[tooltip]::after
+  top: 34px
+  left: calc( 50% - 200px )
+  content: attr(tooltip)
+  text-align: left
+  min-width: 400px
+  max-width: 400px
+  padding: 18px 25px 25px
+  background: var(--first-text)
+  color: var(--bg)
+  z-index: 1000
+  @media (max-width: 767px)
+    top: 30px
+    min-width: 290px
+    max-width: 290px
+    right: 0
+    left: unset
+
+[tooltip]:hover::before,
+[tooltip]:hover::after
+  display: block
+
+[tooltip='']::before,
+[tooltip='']::after
+  display: none!important
+
+[tooltip][flow^="down"]::before
+  top: 100%
+
+[tooltip][flow^="down"]::after
+  top: calc(100% + 16px)
+
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after
+  left: calc(50% - 200px)
+
+@keyframes tooltips-vert
+  to
+    opacity: 1
+
+@keyframes tooltips-horz
+  to
+    opacity: 1
+
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after
+  animation: tooltips-vert 300ms ease-out forwards
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after
+  animation: tooltips-horz 300ms ease-out forwards

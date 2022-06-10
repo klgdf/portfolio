@@ -1,0 +1,106 @@
+.difficulties
+  position: relative
+  padding-bottom: 117px
+  &__title
+    background: var(--bg)
+    padding: 0 40px 40px
+    margin-left: -40px
+    @media (max-width: 767px)
+      padding: 0
+      margin-left: 0
+  &__left
+    position: relative
+    display: flex
+    align-items: flex-end
+    flex: 0 1 50%
+    @media (max-width: 767px)
+      order: 2
+      flex-direction: column
+  &__right
+    position: relative
+    flex: 0 1 50%
+    @media (max-width: 767px)
+      order: 1
+  &-img
+    position: absolute
+    right: 0
+    top: 0
+    bottom: 0
+    width: calc(1920px / 2)
+    @media (max-width: 767px)
+      position: unset
+      width: calc(100% + 30px)
+      height: 270px
+      margin: 0 -15px
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+  &-container
+    display: flex
+    @media (max-width: 767px)
+      flex-direction: column
+  &-block
+    position: relative
+    z-index: 1
+    background: var(--bg-blocks)
+    margin-bottom: -52px
+    @media (max-width: 1279px)
+      margin-bottom: -80px
+    @media (max-width: 991px)
+      margin-bottom: -108px
+    @media (max-width: 767px)
+      margin-top: 15px
+      margin-bottom: 0
+    &__item
+      font-size: 20px
+      line-height: 28px
+      +medium
+      padding: 16px 22px
+      border-bottom: 1px solid #383838
+      @media (max-width: 991px)
+        font-size: 18px
+        line-height: 24px
+        padding: 14px 20px 16px
+      &:last-child
+        border-bottom: 0
+  &-list
+    padding-left: 160px
+    @media (max-width: 991px)
+      padding-left: 80px
+    @media (max-width: 767px)
+      padding-left: 0
+      margin-bottom: 30px
+    &__item
+      display: flex
+      align-items: center
+      margin-bottom: 22px
+      @media (max-width: 767px)
+        line-height: 22px
+      &:last-child
+        margin-bottom: 0
+      &::before
+        content: ''
+        display: block
+        +bg
+        width: 30px
+        height: 30px
+        margin-right: 16px
+      &_1
+        &::before
+          background: url(../img/icon/difficulties_1.svg)
+      &_2
+        &::before
+          background: url(../img/icon/difficulties_2.svg)
+      &_3
+        &::before
+          background: url(../img/icon/difficulties_3.svg)
+      &_4
+        &::before
+          background: url(../img/icon/difficulties_4.svg)
+      &_5
+        &::before
+          background: url(../img/icon/difficulties_5.svg)
+      &_6
+        &::before
+          background: url(../img/icon/difficulties_6.svg)

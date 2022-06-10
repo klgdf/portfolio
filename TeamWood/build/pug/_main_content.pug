@@ -1,0 +1,444 @@
+//- Первый блок
+section.first
+  #first.anchor
+  .container
+    .first-block
+      .first-block__col-1
+        .first-block__box-1
+          h1.first-block__title.title Cпил и подрезка деревьев<br> в Санкт-Петербурге<br>и области в день<br> обращения
+          .first-block__box-2
+            ul.first-block__list
+              li - Высохшие
+              li - Опасные
+              li - Больные
+              li - Гнилые
+              li - Аварийные
+              li - Старые
+            .first-block__box-3
+              span В стандартных<br> и нестандартных условиях
+              span Убираем деревья любой сложности
+        a(href="tel:+79217476765").btn.submit.first-block__button.mobile-hidden Позвонить
+      .first-block__col-2
+        .first-block__image
+          img(src="assets/img/general.webp")
+        a(href="tel:+79217476765").btn.submit.mobile-visible Позвонить
+
+//- Наши услуги
+section.section.service
+  #services.anchor
+  .container
+    h2.title Наши услуги
+    .service-block
+      .service-col.service-col-1
+        .service-list
+          .service-list__item
+            .service-list__number 01
+            .service-list__description <span class="text-color">Спил деревьев</span> вблизи проводов и строений без применения тяжелой техники
+          .service-list__item
+            .service-list__number 02
+            .service-list__description <span class="text-color">Аккуратное удаление</span> веток и стволов, проросших в кровлю, фундамент, стены и другие насаждения
+          .service-list__item
+            .service-list__number 03
+            .service-list__description <span class="text-color">Спил аварийных деревьев</span> по частям в самых труднодоступных местах, растущих возле и внутри водоемов
+          .service-list__item
+            .service-list__number 04
+            .service-list__description При необходимости <span class="text-color">оказываем дополнительные услуги</span>, связанные с расчищением участков от деревьев и кустарников.
+      .service-col.service-col-2
+        .service-slider.swiper-container
+          .swiper-wrapper
+            .service-slider__item.service-slider__item_1.swiper-slide
+              .service-slider__title Проводим подрезку кроны
+            .service-slider__item.service-slider__item_2.swiper-slide
+              .service-slider__title Удаляем сухие и нависающие ветки
+            .service-slider__item.service-slider__item_3.swiper-slide
+              .service-slider__title Распиливаем и убираем упавшие, сгнившие, покосившиеся деревья
+            .service-slider__item.service-slider__item_4.swiper-slide
+              .service-slider__title Распиливаем деревья на чурбаки, заготавливаем дрова 
+          .btn-slider_left.btn-slider.swiper-button-prev
+            <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 17L9 9L1 0.999999" stroke="#181818" stroke-width="2"/></svg>
+          .btn-slider_right.btn-slider.swiper-button-next
+            <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 17L9 9L1 0.999999" stroke="#181818" stroke-width="2"/></svg>
+      .service-col.service-col-3
+        .service-note
+          .service-note__item Устраняем реальную угрозу имуществу и жизни людей
+          .service-note__item Приводим в порядок неэстетичный вид вашего участка
+          .service-note__item Убираем риск заражения здоровых деревьев и растений
+        button.btn.tablet-hidden.e_callback(type="submit", name="submit" value="application" id="application_1").service-button Вызвать специалиста
+      button.service-col-4.btn.tablet-visible.e_callback(type="submit", name="submit" value="application" id="application_1").service-button Вызвать специалиста
+
+//- Как проходят работы
+section.section.stages
+  #stages.anchor
+  .container
+    h2.title.stages__title Как проходят работы
+    .stages-block
+      .stages-block__item.stages-block__item_1
+        .stages-block__text Прием заявки <br> и консультация
+        .stages-block__number 01
+      .stages-block__item.stages-block__item_2
+        .stages-block__text Выезд специалиста <br> на объект и расчет стоимости
+        .stages-block__number 02
+      .stages-block__item.stages-block__item_3
+        .stages-block__text Выполнение необходимых работ
+        .stages-block__number 03
+      .stages-block__item.stages-block__item_4
+        .stages-block__text Оплата только <br> по результату
+        .stages-block__number 04
+
+//- Почему клиенты обращаются
+section.section.why
+  #advantages.anchor
+  .container
+    h2.title Почему клиенты обращаются <br> в <span class="text-color">TeamWood</span>?
+    .why-block
+      .why-block__left
+        ul.why-list
+          li.why-list__item Составляем официальный договор
+          li.why-list__item Выполняем работу <br> за 6–12 часов
+          li.why-list__item Работаем в выходные <br> и праздничные дни
+          li.why-list__item С нами можно договориться о скидках
+        .why-img
+          img(class="lazyload" data-src="assets/img/why.webp", alt="why")
+      .why-block__right
+        .why-block__text
+          p Работы <span class="text-color">выполняют арбористы</span> <br> со стажем в промышленном альпинизме
+          p Мы <span class="text-color">не применяем</span> тяжелую технику.<br> Ваш участок, газон и ландшафтный дизайн не пострадают
+          p Сотрудничаем <span class="text-color">с физическими <br> и юридическими</span> лицами
+          p Соблюдаем нормы <span class="text-color">безопасности</span>
+          p Берем на себя <span class="text-color">возможные риски</span><br> при работе в ограниченных пространствах
+          p Используем только <span class="text-color">профессиональное оборудование</span>: Petzl, Singing rock, Camp, Stihl, TopMatic.
+
+//- Нужна консультация
+section.section.consultation
+  .container.consultation-container
+    .consultation__left
+      h2.title Нужна консультация?
+      .consultation__row
+        button.btn.submit.e_callback(type="submit", name="submit" value="application" id="applications").consultation__button Оставить заявку
+        .consultation__number
+          a(href="tel:+79217476765").consultation__number_tel +7 (921) 747-67-65
+          .consultation__number_text Записаться по телефону
+    .consultation__right
+      img(class="lazyload" data-src="assets/img/saw.webp", alt="saw").consultation__img
+
+//- Мы используем 4 метода спила
+section.section.methods
+  .container
+    h2.title.methods__title Мы используем <span class="text-color">4 метода</span> спила
+    .methods-block
+      .methods-block__col-1
+        .methods-box-1
+          .methods-box-1__item
+            .methods-box-1__text Дерево подпиливается клином и при помощи страховочных элементов валится в нужную сторону. Этот способ так же требует много свободного места.
+            .methods-box-1__number 1
+            .methods-box-1__title 
+              span Целиком в сторону естественного наклона
+          .methods-box-1__item
+            .methods-box-1__text Дерево подпиливается клином и при помощи страховочных элементов валится в нужную сторону. Этот способ так же требует много свободного места.
+            .methods-box-1__number 2
+            .methods-box-1__title 
+              span Целиком с оттяжкой
+          .methods-box-1__item
+            .methods-box-1__text Дерево подпиливается клином и при помощи страховочных элементов валится в нужную сторону. Этот способ так же требует много свободного места.
+            .methods-box-1__number 3
+            .methods-box-1__title 
+              span Распил на части
+          .methods-box-1__item
+            .methods-box-1__text Дерево подпиливается клином и при помощи страховочных элементов валится в нужную сторону. Этот способ так же требует много свободного места.
+            .methods-box-1__number 4
+            .methods-box-1__title 
+              span Распил частями с завешиванием
+        .methods-box-2.tablet-hidden
+          .methods-box-2__item Подобные работы можно выполнить безопасно только при наличии профессионального снаряжения и оборудования
+          .methods-box-2__item Самостоятельный спил может нести угрозу вашей жизни, здоровью, имуществу
+          .methods-box-2__item Аварийные упавшие деревья приносят ущерб, устранять который обходится в разы дороже, чем своевременный вызов арбориста.
+
+      .methods-block__col-2
+        .methods-box-3
+          .methods-box-3__title В каких случаях для спила дерева надо вызывать специалиста? 
+          .methods-box-3__open.e_box3.active Показать список
+          .methods-box-3__list
+            .methods-box-3__item
+              .methods-box-3__head
+                .methods-box-3__img
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#chevron_currentColor")
+                span Высота ствола выше 3 метров
+              .methods-box-3__body
+                img(class="lazyload" data-src="assets/img/metods_1.webp")
+            .methods-box-3__item
+              .methods-box-3__head
+                .methods-box-3__img
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#chevron_currentColor")
+                span Толщина ствола более 20 см
+              .methods-box-3__body
+                img(class="lazyload" data-src="assets/img/metods_2.webp")
+            .methods-box-3__item
+              .methods-box-3__head
+                .methods-box-3__img
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#chevron_currentColor")
+                span Слабая, поврежденная корневая система (корни оголены)
+              .methods-box-3__body
+                img(class="lazyload" data-src="assets/img/metods_3.webp")
+            .methods-box-3__item
+              .methods-box-3__head
+                .methods-box-3__img
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#chevron_currentColor")
+                span Дерево аварийное: сухое, гнилое, имеются надломы и трещины ствола или кроны
+              .methods-box-3__body
+                img(class="lazyload" data-src="assets/img/metods_4.webp")
+            .methods-box-3__item
+              .methods-box-3__head
+                .methods-box-3__img
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#chevron_currentColor")
+                span Упавшее дерево зависло на крыше, стене строения, соседних деревьях
+              .methods-box-3__body
+                img(class="lazyload" data-src="assets/img/metods_5.webp")
+            .methods-box-3__item
+              .methods-box-3__head
+                .methods-box-3__img
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#chevron_currentColor")
+                span Свободная зона вокруг объекта меньше 2-х метров
+              .methods-box-3__body
+                img(class="lazyload" data-src="assets/img/metods_6.webp")
+            .methods-box-3__item
+              .methods-box-3__head
+                .methods-box-3__img
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#chevron_currentColor")
+                span Наклон ствола более 20%
+              .methods-box-3__body
+                img(class="lazyload" data-src="assets/img/metods_7.webp")
+            .methods-box-3__item
+              .methods-box-3__head
+                .methods-box-3__img
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#chevron_currentColor")
+                span Дерево растет вблизи строений
+              .methods-box-3__body
+                img(class="lazyload" data-src="assets/img/metods_8.webp")
+            .methods-box-3__item
+              .methods-box-3__head
+                .methods-box-3__img
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#chevron_currentColor")
+                span Крона опутывает электрические провода
+              .methods-box-3__body
+                img(class="lazyload" data-src="assets/img/metods_9.webp")
+            .methods-box-3__item
+              .methods-box-3__head
+                .methods-box-3__img
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#chevron_currentColor")
+                span Невозможно применение спецтехники: автокрана, вышки
+              .methods-box-3__body
+                img(class="lazyload" data-src="assets/img/metods_10.webp")
+          .methods-box-3__close.e_box3_close Скрыть список
+      .methods-box-2.methods-box-2_tablet.tablet-visible 
+        .methods-box-2__item Подобные работы можно выполнить безопасно только при наличии профессионального снаряжения и оборудования
+        .methods-box-2__item Самостоятельный спил может нести угрозу вашей жизни, здоровью, имуществу
+        .methods-box-2__item Аварийные упавшие деревья приносят ущерб, устранять который обходится в разы дороже, чем своевременный вызов арбориста.
+
+//- Стоимость работ
+section.section.price
+  #price.anchor
+  .container
+    h2.title Стоимость работ
+    .price-block
+      .price-block__left
+        ul.price-list
+          li.price-list__item
+            .price-list__line
+            .price-list__row
+              .price-list__title Спил целого дерева
+              .price-list__text.text-color от <b>2000</b> ₽
+          li.price-list__item
+            .price-list__line
+            .price-list__row
+              .price-list__title Спил 2-мя частями 
+              .price-list__text.text-color от <b>2500</b> ₽
+          li.price-list__item
+            .price-list__line
+            .price-list__row
+              .price-list__title Спил по частям 
+              .price-list__text.text-color от <b>4000</b> ₽
+          li.price-list__item
+            .price-list__line
+            .price-list__row
+              .price-list__title Спил по частям с завешиванием веток 
+                span(tooltip="Когда дерево находится в труднодоступном месте, в опасной близости от строений, либо крона проросла вокруг проводов, его невозможно спилить и свалить целиком. Мы срезаем отдельные ветки, привязываем их веревками и аккуратно спускаем")
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#prompt_currentColor")
+              .price-list__text.text-color от <b>5000</b> ₽
+          li.price-list__item
+            .price-list__line
+            .price-list__row
+              .price-list__title Спил по частям с завешиванием веток и ствола
+                span(tooltip="Когда дерево находится в труднодоступном месте, в опасной близости от строений, либо крона проросла вокруг проводов, его невозможно спилить и свалить целиком. Мы срезаем отдельные ветки, привязываем их веревками и аккуратно спускаем")
+                  svg
+                    use(xlink:href="assets/img/stack/icons/icons.svg#prompt_currentColor")
+              .price-list__text.text-color от <b>6000</b> ₽
+        .price-note
+          .price-note__item Цена ориентирована за дерево диаметром 20 см. Стоимость указана без учета сложности. Окончательную оценку возможно провести только на объекте.
+          .price-note__item Работы выполняются по желанию заказчика, с предварительным согласованием перечня и стоимости.
+          .price-note__item Стоимость на сайте не является публичной офертой.
+      .price-block__right
+        .price-net
+          .price-net__more Дополнительные услуги
+          .price-slider.swiper-container
+            .swiper-wrapper
+              .price-slider__item.price-slider__item_1.swiper-slide.swiper-lazy(data-background="assets/img/price_1.webp")
+                .price-slider__title Распил ствола на чурбаки в подарок
+              .price-slider__item.price-slider__item_2.swiper-slide.swiper-lazy(data-background="assets/img/price_2.webp")
+                .price-slider__title Распил ствола на чурбаки в подарок
+              .price-slider__item.price-slider__item_3.swiper-slide.swiper-lazy(data-background="assets/img/price_3.webp")
+                .price-slider__title Распил ствола на чурбаки в подарок
+              .price-slider__item.price-slider__item_4.swiper-slide.swiper-lazy(data-background="assets/img/price_4.webp")
+                .price-slider__title Распил ствола на чурбаки в подарок
+              .price-slider__item.price-slider__item_5.swiper-slide.swiper-lazy(data-background="assets/img/price_5.webp")
+                .price-slider__title Распил ствола на чурбаки в подарок
+              .price-slider__item.price-slider__item_6.swiper-slide.swiper-lazy(data-background="assets/img/price_6.webp")
+                .price-slider__title Распил ствола на чурбаки в подарок
+              .price-slider__item.price-slider__item_7.swiper-slide.swiper-lazy(data-background="assets/img/price_7.webp")
+                .price-slider__title Распил ствола на чурбаки в подарок
+            .btn-slider_left.btn-slider.swiper-button-prev.price-button-left
+              <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 17L9 9L1 0.999999" stroke="#181818" stroke-width="2"/></svg>
+            .btn-slider_right.btn-slider.swiper-button-next.price-button-right
+              <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 17L9 9L1 0.999999" stroke="#181818" stroke-width="2"/></svg>
+          .price-net__note Стоимость по согласованию
+          .price-grid
+            .price-grid__empty.price-grid__empty_1
+            .price-grid__item.price-grid__item_1(data-bg="assets/img/price_1.webp")
+              .price-grid__title Распил ствола на чурбаки в подарок
+            .price-grid__item.price-grid__item_2(data-bg="assets/img/price_2.webp")
+              .price-grid__title Уборка участка после спила
+            .price-grid__item.price-grid__item_3(data-bg="assets/img/price_3.webp")
+              .price-grid__title Фрезеровка пней
+            .price-grid__item.price-grid__item_4(data-bg="assets/img/price_4.webp")
+              .price-grid__title Уборка остатков распила, кладка поленницы 
+            .price-grid__item.price-grid__item_5(data-bg="assets/img/price_5.webp")
+              .price-grid__title Вывоз порубочных остатков 
+            .price-grid__item.price-grid__item_6(data-bg="assets/img/price_6.webp")
+              .price-grid__title Дробление веток на щепу
+            .price-grid__empty.price-grid__empty_2
+            .price-grid__empty.price-grid__empty_3
+            .price-grid__item.price-grid__item_7(data-bg="assets/img/price_7.webp")
+              .price-grid__title Колка дров
+            .price-grid__empty.price-grid__empty_4
+        button.btn.e_callback(type="submit", name="submit" value="application" id="application_2").price-button Вызвать специалиста
+
+//- Какие факторы осложняют нашу работу
+section.section.difficulties
+  .container.difficulties-container
+    .difficulties__left
+      .difficulties-img
+        img(class="lazyload" data-src="assets/img/difficultes.webp", alt="difficultes")
+      .difficulties-block
+        .difficulties-block__item Нет таких задач, с которыми бы не справились наши арбористы.
+        .difficulties-block__item Наличие помех делает работу более опасной и трудоемкой, поэтому цена за сложный спил будет выше.
+    .difficulties__right
+      h2.title.difficulties__title Какие факторы осложняют <span class="text-color">нашу работу<span>
+      ul.difficulties-list
+        li.difficulties-list__item.difficulties-list__item_1 Наружный газопровод
+        li.difficulties-list__item.difficulties-list__item_2 Пруд или водоем
+        li.difficulties-list__item.difficulties-list__item_3 Газон, клумба, огород
+        li.difficulties-list__item.difficulties-list__item_4 Строения
+        li.difficulties-list__item.difficulties-list__item_5 ЛЭП
+        li.difficulties-list__item.difficulties-list__item_6 Ограждения
+
+//- Отзывы
+section.section.reviews
+  #reviews.anchor
+  .container
+    h2.title Отзывы клиентов
+    .reviews-slider.swiper-container
+      .swiper-wrapper
+        .reviews-slider__item.reviews-slider__item_1.swiper-slide
+          .reviews-slider__left
+            .reviews-slider__photo.mobile-visible
+              img(class="lazyload" data-src="assets/img/review.webp", alt="review")
+            .reviews-slider__name Виталий Михайлович
+            .reviews-slider__info 62 года, пенсионер
+          .reviews-slider__right
+            .reviews-slider__photo.mobile-hidden
+              img(class="lazyload" data-src="assets/img/review.webp", alt="review")
+            .reviews-slider__text Спасибо ребятам за оперативную работу. Огромный тополь, который уже разрушал каменный забор и столб электропередач, убрали за 4 часа осторожно и аккуратно. Не оставили мусора, еще и попилили чурки бесплатно. Очень доволен ценой и буду рекомендовать соседям
+        .reviews-slider__item.reviews-slider__item_1.swiper-slide
+          .reviews-slider__left
+            .reviews-slider__photo.mobile-visible
+              img(class="lazyload" data-src="assets/img/review_1.png", alt="review")
+            .reviews-slider__name Татьяна Сергеевна
+            .reviews-slider__info 40 лет
+          .reviews-slider__right
+            .reviews-slider__photo.mobile-hidden
+              img(class="lazyload" data-src="assets/img/review_1.png", alt="review")
+            .reviews-slider__text После сильной грозы на участке треснула береза и нависла над крышей новой бани. Специалист из TeamWood приехал в течение 2 часов и устранил проблему. Крышу спасли, а цена работ порадовала. Я рассчитывала, что обойдется дороже. Страшно было наблюдать за работой, но все было профессионально, быстро. На наш участок автокран просто не заехал бы, а к этому дереву вообще только узкая дорожка между посадками. Ни одно живое растение не задели. Спасибо большое”.
+        .reviews-slider__item.reviews-slider__item_1.swiper-slide
+          .reviews-slider__left
+            .reviews-slider__photo.mobile-visible
+              img(class="lazyload" data-src="assets/img/review_2.png", alt="review")
+            .reviews-slider__name Маргарита Евгеньевна
+            .reviews-slider__info 46 лет
+          .reviews-slider__right
+            .reviews-slider__photo.mobile-hidden
+              img(class="lazyload" data-src="assets/img/review_2.png", alt="review")
+            .reviews-slider__text Нам помогли аккуратно убрать старую большую яблоню. Давно хотели спилить, нависала над домом, боялись, что упадет. TeamWood аккуратно убрали ветки, а затем постепенно по кускам спилили ствол, крыша и окна не пострадали. Чистая и аккуратная работа. Не хотелось вызывать вышку, так как раньше уборка деревьев вдоль улицы обходилась очень дорого, оставалась куча мусора.
+      .btn-slider_left.btn-slider.swiper-button-prev.reviews-button-left
+        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 17L9 9L1 0.999999" stroke="#181818" stroke-width="2"/></svg>
+      .btn-slider_right.btn-slider.swiper-button-next.reviews-button-right
+        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 17L9 9L1 0.999999" stroke="#181818" stroke-width="2"/></svg>
+
+//- FAQ
+section.section.faq
+  .container
+    h2.title Вопрос - ответ
+    details
+      summary.summary
+        .summary__icon
+        .summary__text Сколько по времени занимает ваша работа?
+      .summary-inner Это напрямую зависит от расположения дерева, его доступности, размеров и сложности. Обычно достаточно от нескольких часов до 1 дня. Если предстоит масштабный спил больших деревьев, то сроки определяются по ситуации.
+    details
+      summary.summary
+        .summary__icon
+        .summary__text Сколько человек в вашей бригаде?
+      .summary-inner Это напрямую зависит от расположения дерева, его доступности, размеров и сложности. Обычно достаточно от нескольких часов до 1 дня. Если предстоит масштабный спил больших деревьев, то сроки определяются по ситуации.
+    details
+      summary.summary
+        .summary__icon
+        .summary__text Может ли заказчик не выезжать на объект?
+      .summary-inner Это напрямую зависит от расположения дерева, его доступности, размеров и сложности. Обычно достаточно от нескольких часов до 1 дня. Если предстоит масштабный спил больших деревьев, то сроки определяются по ситуации.
+    details
+      summary.summary
+        .summary__icon
+        .summary__text Как вы работаете без автовышки?
+      .summary-inner Это напрямую зависит от расположения дерева, его доступности, размеров и сложности. Обычно достаточно от нескольких часов до 1 дня. Если предстоит масштабный спил больших деревьев, то сроки определяются по ситуации.
+    details
+      summary.summary
+        .summary__icon
+        .summary__text Дерево проросло в стене здания или в крыше, можно его убрать?
+      .summary-inner Это напрямую зависит от расположения дерева, его доступности, размеров и сложности. Обычно достаточно от нескольких часов до 1 дня. Если предстоит масштабный спил больших деревьев, то сроки определяются по ситуации.
+    details
+      summary.summary
+        .summary__icon
+        .summary__text Можно ли безопасно убрать упавшее или сломанное дерево?
+      .summary-inner Это напрямую зависит от расположения дерева, его доступности, размеров и сложности. Обычно достаточно от нескольких часов до 1 дня. Если предстоит масштабный спил больших деревьев, то сроки определяются по ситуации.
+    details
+      summary.summary
+        .summary__icon
+        .summary__text Как понять, что дерево нужно спиливать? 
+      .summary-inner Это напрямую зависит от расположения дерева, его доступности, размеров и сложности. Обычно достаточно от нескольких часов до 1 дня. Если предстоит масштабный спил больших деревьев, то сроки определяются по ситуации.
+    details
+      summary.summary
+        .summary__icon
+        .summary__text Что входит в стоимость основной работы?
+      .summary-inner Это напрямую зависит от расположения дерева, его доступности, размеров и сложности. Обычно достаточно от нескольких часов до 1 дня. Если предстоит масштабный спил больших деревьев, то сроки определяются по ситуации.
+    details
+      summary.summary
+        .summary__icon
+        .summary__text Как вы убираете пни?
+      .summary-inner Это напрямую зависит от расположения дерева, его доступности, размеров и сложности. Обычно достаточно от нескольких часов до 1 дня. Если предстоит масштабный спил больших деревьев, то сроки определяются по ситуации. 

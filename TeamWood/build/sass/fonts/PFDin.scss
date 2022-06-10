@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "PF Din Display Pro Light";
+  src: url("../fonts/PFDin/PFDinDisplayPro-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PF Din Display Pro Regular";
+  src: url("../fonts/PFDin/PFDinDisplayPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PF Din Display Pro Medium";
+  src: url("../fonts/PFDin/PFDinDisplayPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PF Din Display Pro Bold";
+  src: url("../fonts/PFDin/PFDinDisplayPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin light() {
+  font-family: "PF Din Display Pro Light";
+  font-weight: 300;
+}
+
+@mixin reg() {
+  font-family: "PF Din Display Pro Regular";
+  font-weight: 400;
+}
+
+@mixin medium() {
+  font-family: "PF Din Display Pro Medium";
+  font-weight: 500;
+}
+
+@mixin bold() {
+  font-family: "PF Din Display Pro Bold";
+  font-weight: 700;
+}

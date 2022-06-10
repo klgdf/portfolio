@@ -1,0 +1,25 @@
+//- Оставьте заявку
+footer.footer
+  .container.footer-container
+    .footer__left
+      h2.title.footer__title Оставьте заявку
+      .footer__subtitle Оставьте заявку, мы быстро перезвоним и ответим на все вопросы
+      form(action="#")#form-footer.form
+        .form__item.form__item_name
+          svg
+            use(xlink:href="assets/img/stack/icons/icons.svg#name_currentColor")
+          input(type="text" name="user" id="user-name" required placeholder="Ваше Имя" autocorrect="off" autocapitalize="on")
+        .form__item.form__item_phone
+          svg
+            use(xlink:href="assets/img/stack/icons/icons.svg#phone_currentColor")
+          input(type="text" name="phone" id="user-phone" required placeholder="Ваш телефон" autocorrect="off" autocapitalize="on")
+        .form__description Нажимая кнопку “Оставить заявку” Вы даете согласие на обработку ваших персональных данных
+        button.btn.submit(type="submit", name="submit_form" value="application" id="application") Оставить заявку
+    .footer__right
+      .form-info
+        .form-info__title или
+        .form-info__text Позвоните нам сами по нашему единому номеру
+        .form-info__number
+          a(href="tel:+79217476765").form-info__number_tel +7 (921) 747-67-65
+          .form-info__number_text Записаться по телефону
+      img(src="assets/img/saw.webp", alt="saw").form-info__img

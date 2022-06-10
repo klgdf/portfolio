@@ -1,0 +1,24 @@
+/* BEGIN INCLUDES */
+@import "includes/normalize.scss";
+@import "includes/reset.scss";
+@import "includes/container.settings.scss";
+@import "includes/custom.scss";
+/* END INCLUDES */
+
+/* BEGIN VENDORS */
+@import "vendors.scss";
+/* END VENDORS */
+
+/* BEGIN FONTS */
+@import "_fonts.scss";
+@import "_colors.scss";
+/* END FONTS */
+
+/* BEGIN MIXIN */
+@import "_mixin.sass";
+/* END MIXIN */
+
+/* BEGIN STYLES */
+@import "_interface.sass";
+@import "_content.scss";
+/* END STYLES */

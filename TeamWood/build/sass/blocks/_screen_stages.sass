@@ -1,0 +1,103 @@
+.stages
+  &__title
+    @media (max-width: 767px)
+      max-width: 320px
+  &-block
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(1, 1fr)
+    @media (max-width: 1100px)
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+    @media (max-width: 991px)
+      grid-template-columns: repeat(1, 1fr)
+      grid-template-rows: repeat(4, auto)
+    &__item
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      padding: 168px 30px 24px 30px
+      border-left: 1px solid var(--bg-blocks)
+      border-right: 1px solid var(--bg-blocks)
+      height: 394px
+      cursor: pointer
+      transition: 0.3s
+      & br
+        @media (max-width: 1279px)
+          display: none
+      @media (max-width: 1100px)
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+      @media (max-width: 991px)
+        flex-direction: row
+        padding: 22px 0
+        height: auto
+        border-right: 0
+        border-left: 0
+        border-bottom: 1px solid var(--bg-blocks)
+      &_1, &_2
+        @media (max-width: 1100px)
+          border-bottom: 2px solid var(--bg-blocks)
+      &_1
+        border-left: 1px solid var(--bg-blocks)
+        @media (max-width: 991px)
+          border-left: none
+          border-top: 1px solid var(--bg-blocks)
+      &_4
+        border-right: 1px solid var(--bg-blocks)
+        @media (max-width: 991px)
+          border-right: none
+        & .stages-block__number
+          &::after
+            width: 10px
+            background-image: url(../img/icon/check.svg)
+            @media (max-width: 991px)
+              margin-top: 12px
+      &_1, &_2, &_3
+        & .stages-block__number
+          &::after
+            width: 5px
+            background-image: url(../img/icon/chevron.svg)
+            @media (max-width: 991px)
+              transform: rotate(90deg)
+              margin-top: 12px
+      &:hover
+        +bg
+        @media (max-width: 991px)
+          background-image: none!important
+        & .stages-block__number
+          opacity: 1
+        &.stages-block__item_1
+          background-image: linear-gradient(90deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 100%), linear-gradient(28.1deg, #222222 20.24%, rgba(34, 34, 34, 0) 100%), url('../img/stages_1.webp')
+        &.stages-block__item_2
+          background-image: linear-gradient(90deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 100%), linear-gradient(28.1deg, #222222 20.24%, rgba(34, 34, 34, 0) 100%), url('../img/stages_2.webp')
+        &.stages-block__item_3
+          background-image: linear-gradient(90deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 100%), linear-gradient(28.1deg, #222222 20.24%, rgba(34, 34, 34, 0) 100%), url('../img/stages_3.webp')
+        &.stages-block__item_4
+          background-image: linear-gradient(90deg, rgba(34, 34, 34, 0.7) 0%, rgba(34, 34, 34, 0) 100%), linear-gradient(28.1deg, #222222 20.24%, rgba(34, 34, 34, 0) 100%), url('../img/stages_4.webp')
+    &__text
+      font-size: 24px
+      line-height: 29px
+      +medium
+      @media (max-width: 991px)
+        font-size: 20px
+        line-height: 24px
+        margin-right: 35px
+    &__number
+      +space-center
+      font-size: 38px
+      line-height: 38px
+      +eur
+      color: transparent
+      opacity: 0.4
+      text-stroke: 1px solid var(--second-text)
+      -webkit-text-stroke-color: var(--second-text)
+      -webkit-text-stroke-width: 1px
+      @media (max-width: 991px)
+        flex-direction: column
+      &::after
+        content: ''
+        display: block
+        opacity: 1
+        height: 10px
+        +bg

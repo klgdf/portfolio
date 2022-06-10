@@ -1,0 +1,42 @@
+.overlay.hidden#menu.menu
+  .overflow
+    .menu__box.overflow__box
+      .overflow__box_close.e_menu_close
+      .menu-nav
+        a(href="#services").menu-nav__item Услуги
+        a(href="#stages").menu-nav__item Этапы работ
+        a(href="#advantages").menu-nav__item Преимущества
+        a(href="#price").menu-nav__item Стоимость
+        a(href="#reviews").menu-nav__item Отзывы
+      .menu-call
+        .menu-call__number
+          a(href="tel:+79217476765").menu-call__number_tel +7 (921) 747-67-65
+          .menu-call__number_text Записаться по телефону
+        button.btn.submit.e_callback(type="submit", name="submit" value="application" id="applications").menu-call__button Оставить заявку
+
+.overlay.hidden#callback.callback
+  .overflow
+    .callback__box.overflow__box
+      .overflow__box_close.e_callback_close
+      h3.popup-title Оставить заявку
+      form(action="#")#form-popup.form
+        .form__item.form__item_name
+          svg
+            use(xlink:href="assets/img/stack/icons/icons.svg#name_currentColor")
+          input(type="text" name="user" id="popup-name" required placeholder="Ваше Имя" autocorrect="off" autocapitalize="on")
+        .form__item.form__item_phone
+          svg
+            use(xlink:href="assets/img/stack/icons/icons.svg#phone_currentColor")
+          input(type="text" name="phone" id="popup-phone" required placeholder="Ваш телефон" autocorrect="off" autocapitalize="on")
+        .form__description Нажимая кнопку “Оставить заявку” Вы даете согласие на обработку ваших персональных данных
+        button.btn.submit(type="submit", name="submit_aplication" value="application" id="application_popup") Оставить заявку
+    .overflow__close.e_callback_close
+
+.overlay.hidden#call.call
+  .overflow
+    .call__box.overflow__box
+      .overflow__box_close.e_call_close
+      h3.popup-title Записаться по телефону
+      a(href="tel:+79217476765").call__number_tel +7 (921) 747-67-65
+    .overflow__close.e_call_close
+

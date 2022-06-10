@@ -1,0 +1,199 @@
+//placeholders
+input
+  transition: 0.3s
+  color: var(--first-text)
+  opacity: 1
+  background: transparent
+  -webkit-text-fill-color: var(--first-text)
+  &::-webkit-input-placeholder
+    opacity: 0.25
+  &::-moz-placeholder
+    opacity: 0.25
+  &:-moz-placeholder
+    opacity: 0.25
+  &:-ms-input-placeholder
+    opacity: 0.25
+
+.mobile
+  &-visible
+    @media (min-width: 768px)
+      display: none
+  &-hidden
+    @media (max-width: 767px)
+      display: none
+
+.tablet
+  &-visible
+    @media (min-width: 992px)
+      display: none
+  &-hidden
+    @media (max-width: 991px)
+      display: none
+
+.anchor
+  position: absolute
+  top: -98px
+  @media (max-width: 767px)
+    top: -87px
+
+h2, h3
+  margin: 0
+
+button, html[type="button"], [type="reset"], [type="submit"]
+  -webkit-appearance: button
+  cursor: pointer
+
+summary
+  list-style: none
+  &::-webkit-details-marker
+    display: none
+
+*
+  scrollbar-color: var(--second-text) #f3f3f3
+  scrollbar-width: thin
+
+*::-webkit-scrollbar
+  width: 4px
+
+*::-webkit-scrollbar-track
+  box-shadow: inset 0 0 14px 14px rgba(196, 196, 196, 0.2)
+  border-radius: 24px
+
+*::-webkit-scrollbar-thumb
+  box-shadow: inset 0 0 14px 14px var(--second-text)
+  border-radius: 24px
+
+*::-webkit-scrollbar-button
+  display: none
+
+body
+  overflow-x: hidden
+  font-size: 20px
+  line-height: 28px
+  +reg()
+  color: var(--first-text)
+  background: var(--bg)
+  @media (max-width: 767px)
+    font-size: 18px
+    line-height: 24px
+
+.wrapper
+  position: relative
+  overflow: hidden
+
+.hidden
+  display: none
+
+.section
+  position: relative
+  padding: 65px 0
+  @media (max-width: 767px)
+    padding: 35px 0
+
+.title
+  font-size: 48px
+  line-height: 54px
+  +eur
+  color: var(--first-text)
+  margin-bottom: 40px
+  @media (max-width: 991px)
+    font-size: 36px
+    line-height: 40px
+  @media (max-width: 767px)
+    font-size: 30px
+    line-height: 36px
+    margin-bottom: 30px
+
+.btn
+  display: block
+  background: transparent
+  color: var(--first-text)
+  border: 2px solid var(--second-text)
+  box-sizing: border-box
+  font-size: 20px
+  line-height: 24px
+  +medium
+  transition: 0.3s
+  @media (max-width: 767px)
+    padding: 13px 0 15px 0
+    width: 100%
+    text-align: center
+  &:hover
+    background: var(--second-text)
+    color: var(--first-text)
+  &-slider
+    +center
+    background: var(--first-text)
+    position: absolute
+    top: calc(50% - 29px)
+    z-index: 10
+    width: 33px
+    height: 58px
+    transition: 0.3s
+    &:hover
+      background: var(--second-text)
+      & svg path
+        stroke: white
+    &::after
+      content: none
+    &_left
+      left: 0
+      transform: rotate(180deg)
+    &_right
+      right: 0
+
+.text-color
+  color: var(--second-text)
+
+.submit
+  padding: 17px 64px
+
+.swiper-wrapper
+  display: flex
+  height: unset!important
+
+.swiper-button-disabled
+  display: none
+
+.swiper-pagination
+  position: unset
+  z-index: 10
+  &-bullet
+    width: 9px
+    height: 9px
+    &-active
+      background: var(--btn-color)
+
+.price-button, .service-button
+  @media (max-width: 991px)
+    white-space: nowrap
+    max-width: 345px
+    margin: 0 auto
+  @media (max-width: 500px)
+    max-width: 100%
+
+//блок консультации и номер телефона в попапе
+.consultation, .call
+  &__number
+    &_tel
+      display: flex
+      align-items: center
+      color: var(--first-text)
+      font-size: 28px
+      line-height: 34px
+      +bold
+      margin-bottom: 3px
+      @media (max-width: 767px)
+        font-size: 24px
+        line-height: 28px
+      &::before
+        content: ''
+        display: block
+        width: 22px
+        height: 22px
+        margin-right: 14px
+        background: url(../img/icon/phone-white.svg)
+        +bg
+        @media (max-width: 767px)
+          width: 18px
+          height: 18px

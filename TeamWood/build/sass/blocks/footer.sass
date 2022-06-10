@@ -1,0 +1,148 @@
+.footer
+  background: var(--bg-blocks)
+  padding-bottom: 60px
+  @media (max-width: 767px)
+    padding-bottom: 0
+  &__title
+    margin-bottom: 28px
+    @media (max-width: 767px)
+      margin-bottom: 14px
+  &__subtitle
+    +light
+    max-width: 375px
+    margin-bottom: 36px
+    @media (max-width: 767px)
+      margin-bottom: 15px
+  &__left
+    padding-top: 100px
+    @media (max-width: 991px)
+      padding-right: 40px
+      padding-top: 60px
+      margin: 0 auto
+    @media (max-width: 500px)
+      padding-right: 0
+  &__right
+    margin-right: -25px
+    @media (max-width: 991px)
+      margin-right: 0
+    @media (max-width: 767px)
+      padding-bottom: 25px
+  &-container
+    display: flex
+    justify-content: space-between
+    @media (max-width: 767px)
+      flex-direction: column
+
+.form
+  max-width: 375px
+  @media (max-width: 767px)
+    margin-bottom: 40px
+  &__description
+    font-size: 15px
+    line-height: 22px
+    +light
+    margin: 40px 0
+    @media (max-width: 767px)
+      margin: 30px 0
+  &__right
+    margin: 0 -20px
+  &__item
+    display: flex
+    align-items: center
+    padding: 16px 0
+    border-bottom: 1px solid #383838
+    margin-bottom: 25px
+    cursor: pointer
+    transition: 0.3s
+    @media (max-width: 767px)
+      padding: 14px 0
+      margin-bottom: 19px
+    & svg
+      margin-right: 14px
+      width: 14px
+      height: 14px
+      color: var(--first-text)
+    & input
+      background: transparent
+      font-size: 19px
+      line-height: 28px
+      +light
+      width: 100%
+      -webkit-box-shadow: inset 0 0 0 50px var(--bg-blocks)
+    &:last-child
+      margin-bottom: 0
+    &:hover
+      border-bottom: 1px solid #fff
+      & svg
+        color: var(--second-text)
+  &-info
+    background: var(--second-text)
+    max-width: 373px
+    color: var(--bg)
+    padding: 100px 50px 220px 50px
+    @media (max-width: 991px)
+      padding: 60px 50px 220px 50px
+    @media (max-width: 767px)
+      max-width: 100%
+      min-width: calc(100% + 30px)
+      width: calc(100% + 30px)
+      margin: 0 -15px
+      padding: 23px 15px 180px
+    &__text
+      +light
+      padding-bottom: 36px
+      border-bottom: 1px solid var(--bg-blocks)
+      @media (max-width: 767px)
+        padding-bottom: 18px
+    &__number
+      padding-top: 36px
+      @media (max-width: 767px)
+        padding-top: 24px
+      &_tel
+        display: flex
+        align-items: center
+        font-size: 28px
+        line-height: 34px
+        color: var(--bg)
+        +bold
+        margin-bottom: 3px
+        @media (max-width: 991px)
+          font-size: 22px
+        @media (max-width: 767px)
+          font-size: 24px
+          line-height: 28px
+        &::before
+          content: ''
+          display: block
+          background: url(../img/icon/phone-black.svg)
+          +bg
+          margin-right: 14px
+          width: 22px
+          height: 22px
+      &_text
+        +light
+        margin-left: 37px
+        @media (max-width: 767px)
+          +reg
+    &__img
+      display: block
+      width: 610px
+      height: 280px
+      margin-left: -212px
+      margin-top: -195px
+      @media (max-width: 991px)
+        width: 340px
+        height: 157px
+        margin: -180px -27px 0 auto
+    &__title
+      font-size: 48px
+      line-height: 66px
+      +eur
+      color: transparent
+      text-stroke: 1px solid var(--bg)
+      -webkit-text-stroke-color: var(--bg)
+      -webkit-text-stroke-width: 1px
+      @media (max-width: 767px)
+        font-size: 30px
+        line-height: 36px
+        margin-bottom: 7px

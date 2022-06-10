@@ -1,0 +1,21 @@
+:root {
+  --first-text: white;
+  --second-text: #e09d64;
+  --third-text: #6f6f6f;
+  --number: #393939;
+  --bg: #181818;
+  --bg-blocks: #222222;
+}
+:root {
+  --first-width: 373px;
+  --first-height: 733px;
+  @media (max-width: 1440px) {
+    --first-height: 650px;
+  }
+  @media (max-width: 1280px) {
+    --first-height: 500px;
+  }
+  @media (max-width: 991px) {
+    --first-width: 180px;
+  }
+}

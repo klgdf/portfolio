@@ -1,0 +1,120 @@
+/* BEGIN CONTAINER SETTINGS */
+
+@mixin container-offsets($type: 0, $padding: 15px) {
+  @if $type == 0 {
+    .container {
+      padding-right: $padding;
+      padding-left: $padding;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  .container:after,
+  .row:after,
+  .row {
+    margin-right: -$padding;
+    margin-left: -$padding;
+  }
+}
+
+@mixin container-margin($min-width, $max-width: 0, $width: 0, $padding: 15px) {
+  @if $max-width == 0 {
+    @media (min-width: $min-width) {
+      @if $width == 0 {
+        .container {
+          width: 100%;
+        }
+      } @else {
+        .container {
+          width: $width;
+        }
+      }
+    }
+  }
+  @if $max-width > 0 {
+    @media (min-width: $min-width) and (max-width: $max-width) {
+      @if $width == 0 {
+        .container {
+          width: 100%;
+        }
+      } @else {
+        .container {
+          width: $width;
+        }
+      }
+    }
+  }
+}
+
+@mixin container-padding($min-width, $max-width: 0, $width: 0, $padding: 15px) {
+  @if $max-width == 0 {
+    @media (min-width: $min-width) {
+      @if $width == 0 {
+        .container {
+          padding-left: $padding;
+          padding-right: $padding;
+        }
+      } @else {
+        .container {
+          padding-left: calc((100% - #{$width}) / 2 + 15px);
+          padding-right: calc((100% - #{$width}) / 2 + 15px);
+        }
+      }
+    }
+  }
+  @if $max-width > 0 {
+    @media (min-width: $min-width) and (max-width: $max-width) {
+      @if $width == 0 {
+        .container {
+          padding-left: $padding;
+          padding-right: $padding;
+        }
+      } @else {
+        .container {
+          padding-left: calc((100% - #{$width}) / 2 + 15px);
+          padding-right: calc((100% - #{$width}) / 2 + 15px);
+        }
+      }
+    }
+  }
+}
+
+/*
+
+  Популярные размеры:
+
+  container-offsets(0);
+  @include container-margin(1400px, 0, 1320px);
+  @include container-margin(1200px, 1399px, 1140px);
+  @include container-margin(992px, 1199px, 960px);
+  @include container-margin(768px, 991px, 720px);
+  @include container-margin(576px, 767px, 540px);
+  @include container-margin(320px, 575px);
+  @include container-margin(320px, 767px);
+
+
+  container-offsets(1);
+  @include container-padding(1400px, 0, 1320px);
+  @include container-padding(1200px, 1399px, 1140px);
+  @include container-padding(992px, 1199px, 960px);
+  @include container-padding(768px, 991px, 720px);
+  @include container-padding(576px, 767px, 540px);
+  @include container-padding(320px, 575px);
+  @include container-padding(320px, 767px);
+
+*/
+
+// @include container-offsets(0);
+// @include container-margin(1200px, 1399px, 1140px);
+// @include container-margin(992px, 1199px, 960px);
+// @include container-margin(768px, 991px, 720px);
+// @include container-margin(320px, 767px);
+
+//@include container-offsets(1);
+@include container-padding(1280px, 0, 1230px);
+@include container-padding(992px, 1279px, 989px);
+@include container-padding(768px, 991px, 740px);
+@include container-padding(375px, 767px, 0, 15px);
+@include container-padding(320px, 374px, 0, 15px);
+
+/* END CONTAINER SETTINGS */
