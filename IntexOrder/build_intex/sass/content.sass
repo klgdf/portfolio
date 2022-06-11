@@ -1,0 +1,892 @@
+.wrapper
+  overflow-x: hidden
+
+body
+  color: #979090
+  font-family: Helvetica, sans-serif
+  background: #fff
+  font: 400 15px/1.2 sans-serif
+
+h1 
+  font: 700 25px/1.2 sans-serif
+  color: #125599
+  @media (max-width: 768px)
+    font: 700 20px/1.2 sans-serif
+
+h2
+  font: 700 20px/1.15 sans-serif
+  color: #979090
+  @media (max-width: 768px)
+    font: 700 17px/1.2 sans-serif
+
+textarea
+  margin-left: 31px
+  width: calc( 100% - 31px )!important
+
+summary
+  list-style: none
+  &::marker
+    display: none
+
+details
+  position: relative
+  padding-top: 20px
+  & .inner__row
+    display: none!important
+  &[open]
+    & .inner__row
+      display: block!important
+    & .summary
+      padding-bottom: 12px
+      &__chevron
+        transform: rotate(180deg)
+
+* 
+  scrollbar-color:  #474545 #c4c4c4
+  scrollbar-width: thin
+  &::-webkit-scrollbar-track
+    background-color: #c4c4c4
+    border-radius: 3px
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))
+  &::-webkit-scrollbar-thumb
+    background-color: #474545
+    border-radius: 3px
+
+.line
+  border: 1px solid rgba(196, 196, 196, 0.5)
+  margin: 15px 0
+  @media (max-width: 992px)
+    margin: 20px 0
+
+.hidden
+  display: none
+
+.inactive
+  opacity: 0.3
+
+#confirm
+  margin-left: 54px
+  width: 225px
+  @media (max-width: 768px)
+    margin: 20px auto 0
+
+//input
+input
+  &[type="text"]
+    text-overflow: ellipsis
+  &[placeholder] 
+    text-overflow:ellipsis
+  &::-moz-placeholder 
+    ext-overflow:ellipsis
+  &:-moz-placeholder 
+    text-overflow:ellipsis
+  &:-ms-input-placeholder
+    text-overflow:ellipsis
+
+.input-invalid
+  border: 1px solid #FF0000!important
+  &::-moz-placeholder 
+    color:#474545!important
+  &:-moz-placeholder 
+    color:#474545!important
+  &:-ms-input-placeholder
+    color: #474545!important
+
+.inner__item, textarea, .acc_body__input, .acc_body__select input, .inner__button
+  border: 1px solid #E2E2E2
+  box-sizing: border-box
+  border-radius: 15px
+  transition: .3s
+  padding: 7px 15px
+  background: 0 0
+  -moz-appearance: none
+  -webkit-appearance: none
+  appearance: none
+  z-index: 10
+  width: 100%
+  position: relative
+
+.inner__item, textarea, .inner__button
+  &::-webkit-input-placeholder
+    color: #979090
+    font: 400 15px/1.2 sans-serif
+  &::-moz-placeholder
+    color: #929090
+    font: 400 15px/1.2 sans-serif
+  &:-ms-input-placeholder
+    color: #929090
+    font: 400 15px/1.2 sans-serif
+
+.acc_body__select input
+  color: #125599
+  font: 700 15px/1.2 sans-serif
+  &::-webkit-input-placeholder
+    color: #125599
+    font: 700 15px/1.2 sans-serif
+  &::-moz-placeholder
+    color: #125599
+    font: 700 15px/1.2 sans-serif
+  &:-ms-input-placeholder
+    color: #125599
+    font: 700 15px/1.2 sans-serif
+
+.acc_body__input
+  color: #474545
+  font: 400 14px/1.2 sans-serif
+  &::-webkit-input-placeholder
+    color: #474545
+    font: 400 14px/1.2 sans-serif
+  &::-moz-placeholder
+    color: #474545
+    font: 400 14px/1.2 sans-serif
+  &:-ms-input-placeholder
+    color: #474545
+    font: 400 14px/1.2 sans-serif
+
+.amount__input
+  color: #125599
+  text-align: center
+  font: 400 14px/1.2 sans-serif
+  &:disabled
+    background-color: #fff
+    &::-webkit-input-placeholder
+      color:#979090
+      font: 400 14px/1.2 sans-serif
+    &::-moz-placeholder
+      color:#979090
+      font: 400 14px/1.2 sans-serif
+    &:-ms-input-placeholder
+      color:#979090
+      font: 400 14px/1.2 sans-serif
+  &::-webkit-input-placeholder
+    color: #125599
+    font: 400 14px/1.2 sans-serif
+  &::-moz-placeholder
+    color: #125599
+    font: 400 14px/1.2 sans-serif
+  &:-ms-input-placeholder
+    color:#125599
+    font: 400 14px/1.2 sans-serif
+
+.content
+  @media (max-width: 576px)
+    padding-top: 20px
+  &__section
+    display: flex
+    padding-bottom: 70px
+    @media (max-width: 992px)
+      flex-direction: column
+  &__1, &__2
+    flex: 0 1 50%
+    max-width: 50%
+    @media (max-width: 992px)
+      flex: 0 1 100%
+      max-width: 100%
+  &__1
+    padding-right: 2.6%
+    @media (min-width: 992px) and (max-width: 1200px)
+      padding-right: 4%
+    @media (max-width: 992px)
+      order: 2
+      padding-right: 0
+  &__2
+    padding-left: 2.6%
+    @media (min-width: 992px) and (max-width: 1200px)
+      padding-left: 4%
+    @media (max-width: 992px)
+      order: 1
+      padding-bottom: 50px
+      padding-left: 0
+  &__title
+    display: flex
+    justify-content: center
+
+.submit
+  color: #FFFFFF
+  font: 700 16px/1.2 sans-serif
+  border-radius: 2px
+  background-color: #125599
+  padding: 14px 0
+  border: transparent
+  width: 175px
+  margin: 20px auto 0
+  display: block
+  @media (max-width: 768px)
+    padding: 11px 0
+    margin: 20px auto 0
+
+.id
+  background-color: #24C166
+  border-radius: 25px
+  padding: 10px 28px
+  color: #fff
+  font: 400 14px/1.2 sans-serif
+  width: max-content
+  @media (max-width: 768px)
+    padding: 10px 17px
+    margin-right: 15px
+  &:last-child
+    @media (max-width: 768px)
+      margin-right: 0
+  &_row
+    padding-bottom: 25px
+    @media (min-width: 992px) and (max-width: 1200px)
+      padding-bottom: 17px
+    @media (max-width: 768px)
+      padding-bottom: 20px
+
+.count
+  color: #474545
+  padding-top: 14px
+  @media (max-width: 1200px)
+    padding-top: 5px
+  &__col
+    &.bold
+      font: 700 23px/1.2 sans-serif
+      @media (max-width: 1200px)
+        font: 700 19px/1.2 sans-serif
+  &__row
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+    @media (max-width: 1200px)
+      margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+
+.inner
+  &__item
+    @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+      margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+  &__item, &__button
+    color: #125599
+  &__button
+    flex: 0 1 48%!important
+  &__text
+    font: 400 12px/1.2 sans-serif
+    padding-top: 15px
+  &__block
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 20px
+    @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+      flex-direction: column
+      margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+    & > div, & > input
+      flex: 0 1 30%
+      @media (max-width: 1600px)
+        flex: 0 1 32%
+    &:last-child
+      margin-right: 0
+  &__row
+    display: flex
+    flex-direction: column
+    @media (max-width: 768px)
+      flex-direction: column
+  &__container
+    width: 67%
+    @media (max-width: 1400px)
+      width: 77%
+    @media (min-width: 768px) and (max-width: 992px)
+      width: 66%
+    @media (min-width: 992px) and (max-width: 1200px)
+      width: 94%
+    @media (max-width: 768px)
+      width: 100%
+    & p
+      display: none
+      margin: 0
+      font: 400 12px/1.2 sans-serif
+      padding-top: 15px
+    & > .inner__block
+      margin-bottom: 0
+
+.tabs
+  margin-bottom: 15px
+  margin-left: -9px
+  display: flex
+  @media (max-width: 768px)
+    flex-direction: column
+    margin-bottom: 20px
+  & input
+    display: none
+  & input[type="radio"]:checked + label
+    color: #125599
+    font-weight: 700
+    & .tab__icon
+      &_1
+        background-image: url("../img/ic1.svg")
+      &_2
+        background-image: url("../img/ic2.svg")
+
+.tab
+  display: flex
+  align-items: center
+  transition: 0.3s
+  flex: 0 1 35%
+  @media (max-width: 1400px)
+    flex: 0 1 40%
+  @media (min-width: 768px) and (max-width: 992px)
+    flex: 0 1 34%
+  @media  (min-width: 992px) and (max-width: 1200px)
+    flex: 0 1 48%
+  &:last-child
+    padding-right: 0
+  &__icon
+    &_1
+      background-image: url("../img/ic1_u.svg")
+    &_2
+      background-image: url("../img/ic2_u.svg")
+
+.forget
+  font: 400 15px/1.2 sans-serif
+  color: #125599
+  transition: 0.3s
+  padding-top: 20px
+  text-align: center
+  &:hover
+    opacity: 0.75
+    text-decoration: none
+
+.part
+  & .row_acc:last-child
+    & .acc_body
+      padding-bottom: 0
+  &:first-child
+    & > .part__title::after
+      @media (max-width: 768px)
+        content: "Выберите способ входа:"
+        font: 400 14px/1.2 sans-serif
+        display: block
+        padding-top: 10px
+        color: #474545
+  & > .part__title
+    margin: 0 0 16px 0
+  &__row
+    display: flex
+    justify-content: space-between
+    padding-bottom: 25px
+    @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+      padding-bottom: 20px
+    & .part__title
+      margin: 0!important
+  &__button
+    color: #125599
+    font: 700 20px/1.2 sans-serif
+    padding-right: 24px
+    @media (max-width: 1200px)
+      padding-right: 0
+    @media (max-width: 768px)
+      font: 700 17px/1.2 sans-serif
+      margin-left: 15px 
+  &__left, &__right
+    background: rgba(196, 196, 196, 0.25)
+    border-radius: 25px
+    padding: 9px 20px
+    font: 400 14px/1.2 sans-serif
+  &__right
+    @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+      display: none
+  &__left
+    display: flex
+    margin-right: 20px
+    @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+      margin-right: 0
+    &_item
+      padding-right: 50px
+      @media (max-width: 1600px)
+        padding-right: 25px
+      &:last-child
+        padding-right: 0
+
+.row
+  &_acc
+    & input[type="radio"], & input[type="radio"] + label ~ div
+      display: none
+    & input + label
+      margin: 0
+      padding: 0
+      cursor: pointer
+      display: flex
+      padding-bottom: 10px
+      font: 400 14px/1.2 sans-serif
+      @media (min-width: 992px) and (max-width: 1200px)
+        padding-bottom: 15px
+      @media (max-width: 576px)
+        padding-bottom: 12px
+      &:last-child
+        padding-bottom: 0
+    & input:checked + label
+      font: 700 15px/1.2 sans-serif
+      color: #474545
+      border-bottom: 0
+      padding-bottom: 0
+      &:before
+        background: #474545
+        width: 26px
+        height: 25px
+        border: 5px solid #e5e5e5
+        margin: 0 15px
+        @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+          margin: 0 7px 0 0
+          width: 27px
+    & input:checked + label + div
+      display: block
+      -webkit-animation: fade ease-in 0.5s
+      -moz-animation: fade ease-in 0.5s
+      animation: fade ease-in 0.5s
+      padding-bottom: 15px
+      padding-top: 10px
+      @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+        padding-top: 7px
+    & input + label:before 
+      content: ""
+      display: inline-block
+      width: 18px
+      height: 17px
+      border-radius: 50%
+      border: 2px solid rgba(0, 0, 0, 0.5)
+      margin: 0 19px
+      @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+        margin: 0 11px 0 4px
+        width: 19px
+    &__text
+      display: flex
+      justify-content: space-between
+      width: 100%
+      @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+        flex-direction: column
+      &_left
+        flex: 0 1 75%
+        @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+          flex: 0 1 100%
+      &_right
+        flex: 0 1 25%
+        text-align: center
+        &::before
+          @media (min-width: 992px) and (max-width: 1200px)
+            font: 400 16px/1.2 sans-serif
+        @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+          flex: 0 1 100%
+          width: max-content
+          background-color: #c4c4c440
+          border-radius: 25px
+          margin: 7px 0 0
+          padding: 9px 20px
+        @media (min-width: 992px) and (max-width: 1200px)
+          font: 700 19px/1.2 sans-serif
+
+.delivery
+  & .row_acc__text_right::before
+    @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+      content: "Стоимость доставки: "
+
+.pay
+  & .row_acc__text_right::before
+    @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+      content: "Комисия за платёж: "
+
+
+@-moz-keyframes fade
+  from 
+    opacity: 0
+  to 
+    opacity: 1 
+
+@-webkit-keyframes fade
+  from 
+    opacity: 0
+  to 
+    opacity: 1
+
+@keyframes fade 
+  from
+    opacity: 0
+  to 
+    opacity: 1 
+
+
+.acc
+  &_body
+    padding-left: 54px
+    width: 75%
+    @media (max-width: 576px), (min-width: 992px) and (max-width: 1200px)
+      width: 100%
+      padding-left: 32px
+    &__text
+      color: #474545
+      font: 400 14px/1.2 sans-serif
+      & p
+        &:last-child
+          margin: 0
+    &__select
+      padding-top: 12px
+      & .select-icon
+        @media (max-width: 576px)
+          display: none
+      @media (max-width: 576px)
+        &::before
+          content: "Выберите отделение Новой почты:"
+          margin-bottom: 10px
+          display: block
+          font: 400 14px/1.2 sans-serif
+          color: #474545
+    &__map
+      color: #125599
+      font: 700 15px/1.2 sans-serif
+      border: 1px solid #E2E2E2
+      box-sizing: border-box
+      border-radius: 15px
+      padding: 7px 53px
+      margin: 12px 0
+      display: block
+      width: max-content
+    &__inputs
+      padding: 12px 0
+    &__input
+      margin-bottom: 10px
+      color: #474545
+      width: 100%
+      &:last-child
+        margin-bottom: 0 
+
+.select
+  position: relative
+  width: 100%
+  &.active
+    & .select-icon
+      transform: rotate(180deg)
+    & .select-input
+      border-bottom: none
+      border-radius: 15px 15px 0 0
+    & .select-list
+      display: block
+      padding: 0 5px 5px 0
+      border: 1px solid #E2E2E2
+      border-top: none
+      box-sizing: border-box
+      border-radius: 0 0 15px 15px
+      & ul
+  &-icon
+    position: absolute
+    right: 15px
+    top: 13px
+  &-input
+    margin-bottom: 0
+  &-list
+    position: absolute
+    display: none
+    width: 100%
+    background: #fff
+    max-height: 230px
+    z-index: 90
+    border: 1px solid #E2E2E2
+    & ul
+      list-style: none
+      overflow-y: scroll
+      padding-left: 15px
+      max-height: 220px
+      scrollbar-color:  #474545 #c4c4c4
+      scrollbar-width: thin
+      scrollbar-border-radius: 3px
+      &::-moz-scrollbar-button
+        display: none
+      &::-webkit-scrollbar
+        width: 6px
+        background-color: #c4c4c4
+        border-radius: 3px
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))
+      &::-webkit-scrollbar-thumb
+        background-color: #474545
+        border-radius: 3px
+    & li
+      color: #125599
+      font: 400 14px/1.2 sans-serif
+      padding: 6px 0
+      cursor: pointer
+
+.summary, .tab
+  &__icon
+    width: 42px
+    height: 36px
+    display: block
+    background-position: center
+    background-repeat: no-repeat
+
+.agree
+  padding-top: 15px
+  & input:checked + label
+    font: 400 14px/1.2 sans-serif!important
+    color: #979090
+    &::before
+      background: rgba(71, 69, 69, 0.5)
+  &:input + label::before
+    border: 5px solid rgba(199, 190, 190, 0.5)
+
+.summary
+  display: flex
+  align-items: center
+  cursor: pointer
+  color: #125599
+  margin-left: -8px
+  &__text
+    padding-right: 10px
+    font: 700 15px/1.2 sans-serif
+  &__icon
+    &_1
+      background-image: url("../img/ic3.svg")
+    &_2
+      background-image: url("../img/ic4.svg")
+  &__row
+    display: flex
+    align-items: center
+
+.summary__chevron, .select-icon, .amount__chevron
+  width: 12px
+  height: 7px
+  display: block
+  background-position: center
+  background-repeat: no-repeat
+  background-image: url("../img/chevron.svg")
+  transition: 0.2s
+
+.amount
+  display: flex
+  align-items: flex-end
+  flex-direction: column
+  justify-content: center
+  @media (max-width: 576px)
+    align-items: center
+  @media (min-width: 992px) and (max-width: 1200px)
+    align-items: flex-end
+  &__row
+    display: flex
+    padding: 0 20px 5px 0
+    @media (min-width: 992px) and (max-width: 1200px)
+      padding: 0 0 5px 0
+    @media (max-width: 576px)
+      padding: 0 0 5px
+  &__discount
+    background-color: #FF0000
+    border-radius: 25px
+    padding: 5px 4px
+    margin-right: 12px
+    color: #FFFFFF
+    font: 700 10px/1.2 sans-serif
+    width: max-content
+  &__input
+    border: 1px solid #E2E2E2
+    border-radius: 25px
+    height: 30px
+    width: 200px
+    margin: 0 auto
+    display: block
+    @media (min-width: 992px) and (max-width: 1200px)
+      margin: 0
+  &__old
+    color: rgba(151, 144, 144, 0.5)
+    position: relative
+    &:before
+      content: ""
+      width: 100%
+      height: 1px
+      background: #979090
+      position: absolute
+      top: 50%
+      left: 0
+  &__new
+    color: #979090
+    font: 700 27px/1.2 sans-serif
+    padding: 0 20px 15px 0
+    @media (min-width: 992px) and (max-width: 1200px)
+      padding: 0 0 10px
+    @media (max-width: 576px)
+      padding: 0 0 15px
+  &__button
+    display: flex
+    align-items: center
+    justify-content: center
+  &__text
+    padding-right: 20px
+
+.quantity
+  display: flex
+  align-items: center
+  padding: 0 10px
+  &__plus, &__minus
+    width: 40px
+    height: 40px
+    border: 1px solid #E2E2E2
+    box-sizing: border-box
+    border-radius: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #125599
+    font: 400 30px/1.2 sans-serif
+    cursor: pointer
+  &__number
+    padding: 0 7px
+    color: #125599
+    font: 700 25px/1.2 sans-serif
+
+.plus, .equally
+  font: 400 30px/1.2 sans-serif
+  padding: 0 2px
+
+.mini-card
+  border: 1px solid #125599
+  box-sizing: border-box
+  border-radius: 15px
+  padding: 14px 17px 24px
+  min-width: 115px
+  max-width: 135px
+  @media (min-width: 992px) and (max-width: 1200px)
+    padding: 15
+    width: 110px
+  @media (max-width: 992px)
+    width: 120px
+  &__img
+    & img
+      width: 100%
+  &__text
+    font: 700 14px/1.2 sans-serif
+
+.card
+  & .quantity
+    @media (min-width: 992px) and (max-width: 1200px)
+      padding: 0
+      justify-content: flex-start
+      margin-bottom: 10px
+    @media (max-width: 576px)
+      padding: 10px 0 20px
+      margin: 0 auto
+  &_1, &_2
+    border-radius: 15px
+    padding: 14px 24px
+    margin: 10px 0
+    position: relative
+    @media (min-width: 992px) and (max-width: 1200px)
+      padding: 15px
+    @media (max-width: 768px)
+      padding: 15px
+  &_1
+    border: 1px solid #125599
+  &_2
+    border: 1px solid #E2E2E2
+    margin-bottom: 
+  &__row
+    display: flex
+    justify-content: space-between
+    @media (min-width: 992px) and (max-width: 1200px)
+      & .amount
+        flex: 0 1 28%
+    &:last-child
+      padding-top: 8px
+      @media (min-width: 992px) and (max-width: 1200px)
+        align-items: flex-end
+        padding-bottom: 10px
+      @media (max-width: 576px)
+        flex-direction: column
+  &__delete
+    cursor: pointer
+    position: absolute
+    right: 13px
+    width: 30px
+    height: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+  &__title
+    margin-right: 30px
+  &__block
+    display: flex
+    justify-content: space-between
+    flex: 0 1 58%
+    @media (max-width: 576px)
+      flex-direction: column
+    @media (min-width: 992px) and (max-width: 1200px)
+      flex-direction: column
+      align-items: flex-start
+      & .quantity
+        margin: 0 auto
+  &__status
+    color: #474545
+    font: 400 14px/1.2 sans-serif
+    padding-bottom: 15px
+  &__img
+    width: 130px
+    @media (min-width: 992px) and (max-width: 1200px)
+      width: 170px
+      margin-bottom: 10px
+      margin: 0 auto
+    @media (max-width: 992px)
+      width: 160px
+    @media (max-width: 576px)
+      margin: 0 auto
+    & img
+      width: 100%
+  &_complect
+    & .id_row
+      padding-right: 24px
+      padding-left: 24px
+      @media (max-width: 1200px)
+        padding-right: 0
+        padding-left: 0
+    &__row
+      padding: 0 24px 25px
+      @media (max-width: 1200px)
+        padding: 0 0 15px
+      &:last-child
+        overflow-x: auto
+        &::-webkit-scrollbar
+          height: 6px
+        &::-webkit-scrollbar-button
+          display: block
+          width: 3px
+          height: 3px
+    &__products 
+      display: flex
+      align-items: center
+
+.id_row, .card_complect__row
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+
+//popups
+@include popup
+@include overflow-hidden
+
+.popup
+  background-color: #fff
+  padding: 35px
+  max-width: 700px
+  text-align: center
+  border-radius: 15px
+  @media (max-width: 576px)
+    margin: auto 20px
+  @media (max-width: 768px)
+    margin: auto 45px
+
+.screen_callback
+  &__title
+    font: 700 22px/1.2 sans-serif
+    color: #125599
+    padding-bottom: 25px
+  &__box_1
+    color: #202020
+  &__row
+    display: flex
+    padding-top: 40px
+    justify-content: center
+    align-items: center
+    & input
+      margin-right: 15px
+

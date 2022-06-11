@@ -1,0 +1,39 @@
+.header
+  padding: 30px 0 25px
+  @media (max-width: 576px)
+    padding: 20px 0 15px
+    -webkit-box-shadow: 0px 1px 8px 0px rgba(34, 60, 80, 0.2)
+    -moz-box-shadow: 0px 1px 8px 0px rgba(34, 60, 80, 0.2)
+    box-shadow: 0px 1px 8px 0px rgba(34, 60, 80, 0.2)
+  & .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @media (max-width: 576px)
+      flex-direction: column
+      align-items: flex-start
+  &__logo
+    @media (max-width: 576px)
+      padding-bottom: 10px
+    & a
+      background-image: url("../img/logo.svg")
+      background-size: cover
+      width: 220px
+      height: 50px
+      display: block
+      &:hover
+        opacity: 1
+      @media (max-width: 576px)
+        width: 175px
+        height: 40px
+  &__menu
+    display: flex
+    color: #125599
+    font: 700 20px/1.2 sans-serif
+    @media (max-width: 576px)
+      justify-content: flex-end
+      font: 700 17px/1.2 sans-serif
+    &_1
+    &_2
+    &_dash
+      padding: 0 16px

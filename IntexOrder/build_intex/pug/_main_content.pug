@@ -1,0 +1,374 @@
+section.content(action="#")
+  .container
+    h1.content__title Оформление заказа
+    .content__section
+
+      .content__1
+        .part
+          h2.part__title Контактные данные
+          .tabs
+            input(type="radio" name="customer" value="new_customer" id="customer_1" checked)
+            label.tab(for="customer_1" onclick="tabChoice(0)") 
+              .tab__icon.tab__icon_1
+              .tab__text Я новый покупатель
+            input(type="radio" name="customer" value="regular_customer" id="customer_2")
+            label.tab(for="customer_2" onclick="tabChoice(1)") 
+              .tab__icon.tab__icon_2
+              .tab__text Я постоянный клиент
+          .tab_inner
+            form#new_customer.inner(action="#")
+              .inner__row
+                .inner__block
+                  input(type="text" name="reg_surname" id="reg_surname" required placeholder="Фамилия" autocorrect="off" autocapitalize="on" data-placeholder="Введите корректную фамилию").inner__item.input-required
+                  input(type="text" name="reg_name" id="reg_name" required placeholder="Имя" autocorrect="off" autocapitalize="on" data-placeholder="Введите корректное имя").inner__item.input-required
+                  input(type="text" name="reg_patronymic" id="reg_patronymic" required placeholder="Отчество" autocorrect="off" autocapitalize="on" data-placeholder="Введите корректное отчество").inner__item.input-required
+                .inner__block
+                  input(type="tel" name="reg_tel" id="reg_tel" required placeholder="Моб. телефон" data-placeholder="Неправильный формат номера").inner__item.input-required
+                  .select#select_1
+                    input.select-input(type="text" placeholder="Город" autocomplete="off" name="select_place" data-placeholder="Город не найден").inner__item.input-required
+                    span.select-icon
+                    .select-list
+                      ul
+                        li Коново
+                        li Лосево
+                        li Долгопрудное
+                        li Сыктывкар
+                        li Ужгород
+                        li Орова
+                        li Квашнино
+                        li Крапивино
+                        li рролапраовы
+                        li Канив
+                        li лапроаив
+                        li Канив                  
+                  input(type="email" name="reg_email" id="reg_email" required, placeholder="Ваш E-mail" autocorrect="off" autocapitalize="off" data-placeholder="Неверно введён номер").inner__item.input-required
+
+              details
+                summary.summary
+                  .summary__row
+                    .summary__icon.summary__icon_1
+                    .summary__text Получатель другой человек
+                    .summary__chevron
+                .inner__row
+                  .inner__block
+                    input(type="text" name="other_surname" id="other_surname" placeholder="Фамилия" data-placeholder="Введите корректную фамилию" autocorrect="off" autocapitalize="on").inner__item.input-required
+                    input(type="text" name="other_name" id="other_name" placeholder="Имя" data-placeholder="Введите корректное имя" autocorrect="off" autocapitalize="on").inner__item.input-required
+                    input(type="text" name="other_patronymic" id="other_patronymic" data-placeholder="Введите корректное отчество" placeholder="Отчество" autocorrect="off" autocapitalize="on").inner__item.input-required
+                  .inner__block
+                    input(type="tel" name="other_tel" id="other_tel" placeholder="Моб. телефон" data-placeholder="Неправильный формат номера" autocorrect="off").inner__item.input-required
+
+              .line
+
+              .part
+                h2.part__title Доставка
+                .part__row
+                  .part__left
+                    .part__left_item Вес: 2.555
+                    .part__left_item Объем: 0,168 м³
+                    .part__left_item Количество мест: 5 шт.
+                  .part__right Стоимость доставки
+                .part__accordion.delivery
+                  .row_acc
+                    input(type="radio" name="delivery" value="pickup" id="pickup" checked)
+                    label(for="pickup")
+                      .row_acc__text
+                        .row_acc__text_left Самовывоз из Новой почты. Отправка сегодня
+                        .row_acc__text_right 25грн
+                    .acc_body
+                      .acc_body__text Ожидаемое прибытие на отделение 1 - 2 дня, автовозврат на 5 день. Номер ТТН будет отправлен в СМС уведомлении (почту).
+                      .acc_body__select
+                        .select#select_2
+                          input.select-input(type="text" placeholder="Выберите отделение Новой почты" autocomplete="off" name="select_post")
+                          span.select-icon
+                          .select-list
+                            ul
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №2 (Почтовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №3357 (Почтомат)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+
+                  .row_acc
+                    input(type="radio" name="delivery" value="courier" id="courier")
+                    label(for="courier")
+                      .row_acc__text
+                        .row_acc__text_left Курьерская доставка Новой Почтой. Отправка сегодня.
+                        .row_acc__text_right 45грн
+                    .acc_body
+                      .acc_body__text Ожидаемое прибытие на отделение 2 - 3 дня, ожидайте звонок курьера, автовозврат на 5 день. Номер ТТН будет отправлен в СМС уведомлении (почту).
+                      .acc_body__select
+                        .select#select_3.active
+                          input.select-input(type="text" placeholder="Выберите отделение Новой почты" autocomplete="off" name="select_curier")
+                          span.select-icon
+                          .select-list
+                            ul
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №2 (Почтовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №3357 (Почтомат)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+                              li Киев №1 (Грузовое отделение)
+
+                  .row_acc
+                    input(type="radio" name="delivery" value="pickup_shop" id="pickup_shop")
+                    label(for="pickup_shop")
+                      .row_acc__text
+                        .row_acc__text_left Самовывоз из точки выдачи г. Ужгород. Выдача сегодня
+                        .row_acc__text_right 0грн
+                    .acc_body
+                      .acc_body__text График работы: Пн-Пт: c 14:00 до 17:00. Точка выдачи заказов по адресу: г. Ужгород, ул. Радищева, 11а.
+                      a(href="#").acc_body__map Смотреть карту
+                      .acc_body__text Консультация, изменения заказа в момент выдачи - нет возможности. Выдача только по № заказа.
+
+              .line
+
+              .part
+                h2.part__title Оплата
+                .part__row
+                  .part__left Получение заказа от 5000₴ только по паспорту (Закон № 361- IX) 
+                  .part__right Комисия за платёж
+                .part__accordion.pay
+                  .row_acc
+                    input(type="radio" name="pay" value="cash" id="cash" checked)
+                    label(for="cash") 
+                      .row_acc__text
+                        .row_acc__text_left Оплата наличными на точке выдачи Самовывоз.
+                        .row_acc__text_right 0грн
+                    .acc_body
+                      .acc_body__text Резерв заказа - 24 часа.
+
+                  .row_acc
+                    input(type="radio" name="pay" value="online" id="online")
+                    label(for="online") 
+                      .row_acc__text
+                        .row_acc__text_left Оплата онлайн
+                        .row_acc__text_right 30грн
+                    .acc_body
+                      .acc_body__text Оплата платежной системой LiqPay,  NovaPay: зачисление до 1 минуты.
+
+                  .row_acc
+                    input(type="radio" name="pay" value="privatbank" id="privatbank")
+                    label(for="privatbank") 
+                      .row_acc__text
+                        .row_acc__text_left Оплата на карту ПриватБанк
+                        .row_acc__text_right 11грн
+                    .acc_body
+                      .acc_body__text
+                        p 100% предоплата на карта ПриватБанк: 1% от суммы, зачисление 5-30 минут. <br> Внимание! В назначение платежа укажите № заказа для идентификации платежа. <br> Резерв заказа - 24 часа
+                        p Реквизиты будут отправлены СМС уведомлением (почту). Оплата с других банков:  зачисление возможно до 3-х рабочих дней.
+
+                  .row_acc
+                    input(type="radio" name="pay" value="legal_entities" id="legal_entities")
+                    label(for="legal_entities") 
+                      .row_acc__text
+                        .row_acc__text_left Безналичными для юридических лиц
+                    .acc_body
+                      .acc_body__text Для создания расчетный счет для оплаты, укажите дополнительную информацию:
+                      .acc_body__inputs
+                        input(type="text" placeholder="Название организации, код ЄДРПОУ" name="organization" id="organization" autocorrect="off").acc_body__input
+                        input(type="text" placeholder="Получатель ФИО, телефон" name="recipient" id="recipient" autocorrect="off").acc_body__input
+                      .acc_body__text Резерв заказа - 24 часа. Документы будут отправлены на почту: расходная накладная, скан копии документов. Не плательщик НДС, без печатей, нет возможности включить стоимость доставки в счет.
+
+                  .row_acc.inactive
+                    input(type="radio" name="in_parts" value="in_parts" id="in_parts" disabled)
+                    label(for="in_parts") 
+                      .row_acc__text
+                          .row_acc__text_left Оплата частями недоступна
+
+              details
+                summary.summary
+                  .summary__row
+                    .summary__icon.summary__icon_2
+                    .summary__text Добавить коментарий к заказу
+                    .summary__chevron
+                .inner__row
+                  textarea(name="comment-order", id="comment-order", cols="100%", rows="max-content", placeholder="Коментарий к заказу...")
+
+              .line
+
+              .part
+                h2.part__title Подтверждение
+                .part__accordion
+                  .row_acc
+                    input(type="radio" name="callback" value="send" id="send" checked)
+                    label(for="send")
+                      .row_acc__text
+                          .row_acc__text_left Не перезванивайте мне - Лучше отправляйте БЫСТРЕЕ!.
+                    .acc_body
+                      .acc_body__text Мы перезвоним только при возникновении вопросов. Информацию о заказе Вы будете получать в SMS и email.
+
+                  .row_acc
+                    input(type="radio" name="callback" value="callback" id="callback")
+                    label(for="callback") 
+                      .row_acc__text
+                          .row_acc__text_left Ожидаю звонка менеджера - Остались вопросы! 
+
+              .row_acc.agree
+                input(type="radio" value="agree" name="agree" id="agree" checked)
+                label(for="agree") 
+                  .row_acc__text
+                    .row_acc__text_left Подтверждая заказ, я принимаю <a href="#"> условия гарантии </a> интернет - магазина IntexPool.ua
+
+              button(type="submit" name="submit_order" value="confirm" id="confirm").submit Заказ подтверждаю
+
+            form#entry_customer.inner.hidden
+              .inner__container
+                .inner__block
+                  input(type="email" name="email_entry" placeholder="Ваш E-mail" data-placeholder="Введите корректный E-mail" id="email_entry").inner__item.inner__button.input-required
+                  input(type="text" name="password_entry" placeholder="Введите пароль" data-placeholder="Неверый пароль" id="password_entry").inner__item.inner__button.input-required
+                .forget(onclick="tabChoice(2)") Забыли пароль?
+                button(type="submit" name="entry" value="entry" id="entry").submit Вход
+
+            form#restore_password.inner.hidden
+              .inner__container
+                .inner__block
+                  input(type="email" placeholder="Введите ваш E-mail" name="forget_email" id="forget_email" autocorrect="off", autocapitalize="off").inner__item.inner__button
+                  input(type="tel" placeholder="Введите ваш телефон" name="forget_tel" id="forget_tel").inner__item.inner__button
+                .inner__text Пожалуйста, введите логин либо телефон, обязательное только одно поле
+                button(type="submit" name="restore" value="restore" id="restore").submit Восстановить
+          
+
+      .content__2
+        .part
+          .part__row
+            h2.part__title Корзина
+            a(href="#").part__button Продолжить покупки
+
+        .card_complect
+          .id_row
+            .id В наличии
+            .id Отправим сегодня
+          .card_complect__row
+            .card_complect__products
+              .mini-card 
+                .mini-card__img
+                  img(src="assets/img/s_img.png", alt="")
+                .mini-card__text Intex 64756
+              .plus +
+              .mini-card 
+                .mini-card__img
+                  img(src="assets/img/package.png", alt="")
+                .mini-card__text Intex 64756
+              .plus +
+              .mini-card
+                .mini-card__img
+                  img(src="assets/img/p.png", alt="")
+                .mini-card__text Intex 64756
+            .quantity
+              .quantity__minus - 
+              .quantity__number 1
+              .quantity__plus +
+            .equally =
+            .amount
+              .amount__row
+                .amount__discount 30%
+                .amount__old 999грн
+              .amount__new 996грн
+              input(type="text" name="your_price" id="your_price_1" placeholder="Ваша цена 999 грн" disabled).amount__input
+
+        .card_1
+          .card
+            .card__row
+              .card__title Intex 64756 Матрас 76 x 191 x 25 cм. Одноместный
+              .card__delete
+                img(src="assets/img/close.svg", alt="")
+            .card__row
+              .card__block
+                .card__img
+                  img(src="assets/img/img.png", alt="")
+                .quantity
+                  .quantity__minus - 
+                  .quantity__number 1
+                  .quantity__plus +
+              .amount
+                .amount__row
+                  .amount__discount 30%
+                  .amount__old 999грн
+                .amount__new 996грн
+                input(type="text" name="your_price" id="your_price_2" placeholder="Ваша цена 999 грн").amount__input
+
+        .card_1
+          .card
+            .card__row
+              .card__title Intex 64756 Матрас 76 x 191 x 25 cм. Одноместный
+              .card__delete
+                img(src="assets/img/close.svg", alt="")
+            .card__row
+              .card__block
+                .card__img
+                  img(src="assets/img/img.png", alt="")
+                .quantity
+                  .quantity__minus -
+                  .quantity__number 1
+                  .quantity__plus +
+              .amount
+                .amount__row
+                  .amount__discount 30%
+                  .amount__old 999грн
+                .amount__new 996грн
+                a(href="#").amount__button.amount__input
+                  .amount__text Выбрать комплект
+                  .amount__chevron
+
+        .card_2
+          .card.inactive
+            .card__status Под заказ
+            .card__row
+              .card__title Intex 64756 Матрас 76 x 191 x 25 cм. Одноместный
+              .card__delete
+                img(src="assets/img/close.svg", alt="")
+            .card__row
+              .card__block
+                .card__img
+                  img(src="assets/img/img.png", alt="")
+              .amount
+                .amount__new 996грн
+          .line
+          .card
+            .id_row
+              .id В наличии 100% аналог
+              .id Отправим сегодня
+            .card__row
+              .card__title Intex 64756 Матрас 76 x 191 x 25 cм. Одноместный
+              .card__delete
+                img(src="assets/img/close.svg", alt="")
+            .card__row
+              .card__block
+                .card__img
+                  img(src="assets/img/img.png", alt="")
+                .quantity
+                  .quantity__minus -
+                  .quantity__number 1
+                  .quantity__plus +
+              .amount
+                .amount__row
+                  .amount__discount 30%
+                  .amount__old 999грн
+                .amount__new 996грн
+                a(href="#").amount__button.amount__input
+                  .amount__text Подменить в заказе
+                  .amount__chevron
+
+        .count
+          .count__row
+            .count__col Всего:
+            .count__col 19 996 грн
+          .count__row
+            .count__col Скидка:
+            .count__col 996 грн
+          .count__row
+            .count__col.bold Итого: 
+            .count__col.bold 20 992 грн
