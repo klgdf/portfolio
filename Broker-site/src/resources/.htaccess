@@ -1,0 +1,30 @@
+ErrorDocument 404 /beta/404.html
+ErrorDocument 503 /beta/503.html
+
+# SEO правила, нобходимо ниже убрать все '#'
+
+# RewriteEngine On
+# RewriteBase / 
+
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$
+# RewriteRule ^(.*)$ http://%1/beta/$1 [L,R=301]
+
+# RewriteCond %{REQUEST_URI} ^(.*?)\/{2,}(.*?)$
+# RewriteRule . %1/beta/%2 [L,R=301]
+# RewriteCond %{THE_REQUEST} //
+# RewriteRule .* /beta/$0 [R=301,L]
+
+# RewriteCond %{REQUEST_URI} ^[^A-Z]*[A-Z].*
+# RewriteRule ^ ${lc:%{REQUEST_URI}} [L,R=301]
+
+# Redirect 301 /beta/index.php /beta/
+# Redirect 301 /beta/index.asp /beta/
+# Redirect 301 /beta/index.aspx /beta/
+# Redirect 301 /beta/index.htm /beta/
+# Redirect 301 /beta/main.html /beta/
+# Redirect 301 /beta/main.php /beta/
+
+# <IfModule mod_rewrite.c> 
+# RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ (.+)\.html\ HTTP/ 
+# RewriteRule ^(.+)\.html?$ http://%{HTTP_HOST}/beta/$1 [R=301,L]
+# </IfModule>

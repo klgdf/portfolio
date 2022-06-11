@@ -1,0 +1,25 @@
+mixin account(i)
+	.accounts-list__wrapper
+		.account-list__item(class=["account-list__item"+i] data-aos="fade-up")
+			.accounts-list__header
+				h3.accounts-list__title.h2-title !{indexAccountsText["account"+i].title[lang]}
+				p.accounts-list__text !{indexAccountsText["account"+i].text[lang]}
+			ul.accounts-list__conditions
+				if i == 1
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_1[lang]} $150
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_2[lang]} 1:100
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_3[lang]}
+				else if i == 2
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_1[lang]} $1 000 
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_2[lang]} 1:500
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_3[lang]}
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_4[lang]}
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_8[lang]}
+				else if i == 3
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_1[lang]} $10 000
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_2[lang]} 1:500
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_3[lang]}
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_4[lang]}
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_11[lang]}
+					li.conditions-list__item.subtitle !{indexAccountsText.account_condition_12[lang]}
+			a(href=linkSignup).btn.btn-main.btn-big !{buttonText.btnStartTrade[lang]}

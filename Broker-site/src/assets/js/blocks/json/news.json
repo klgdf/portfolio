@@ -1,0 +1,37 @@
+{
+    "ru": {
+        "authors": "Источник",
+        "date": "Дата публикации",
+        "more": "Подробнее"
+    },
+    "en": {
+        "authors": "Source",
+        "date": "Publication Date",
+        "more": "More"
+    },
+    "es": {
+        "authors": "El autor",
+        "date": "Fecha de publicación",
+        "more": "Más detalles"
+    },
+    "de": {
+        "authors": "Der Autor",
+        "date": "Veröffentlichungsdatum",
+        "more": "Weitere Details"
+    },
+    "fr": {
+        "authors": "L`auteur",
+        "date": "Date de publication",
+        "more": "Plus de détails"
+    },
+    "it": {
+        "authors": "L`autore",
+        "date": "Data di pubblicazione",
+        "more": "Maggiori dettagli"
+    },
+    "cn": {
+        "authors": "作者",
+        "date": "出版日期",
+        "more": "更多細節"
+    }
+}

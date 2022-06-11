@@ -1,0 +1,19 @@
+.section-goals {
+	&-wrapper {
+		color: $text-color;
+	}
+}
+
+.goals-list{
+	grid-template-rows: repeat(1, 1fr);
+	&__text{
+		max-width: rem(448px);
+	}
+}
+
+@media screen and (max-width: 539px) {
+	.goals-list{
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+}

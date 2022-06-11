@@ -1,0 +1,139 @@
+.section-steps {
+	padding: rem(56px) 0;
+	& .btn-second {
+		border-color: #fff;
+	}
+	&__color {
+		position: relative;
+		overflow: hidden;
+		background: $main-color;
+		color: white;
+		border-radius: rem(36px);
+		backdrop-filter: blur(rem(31px));
+		padding: rem(32px) rem(102px);
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: -1;
+			bottom: rem(-132px);
+			right: rem(-36px);
+			background: url(../images/step-background.png);
+			background-repeat: no-repeat;
+			width: rem(700px);
+			height: rem(414px);
+			transform: rotate(-5.98deg);
+		}
+	}
+	&__title {
+		text-align: center;
+		max-width: rem(796px);
+		margin: 0 auto rem(24px);
+	}
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -16px;
+	}
+	.text-center {
+		margin: rem(54px) auto 0;
+	}
+}
+
+.steps-list {
+	display: grid;
+	display: -ms-grid;
+	gap: rem(32px);
+	grid-template-columns: repeat(3, 1fr);
+	-ms-grid-columns: 1fr rem(32px) 1fr rem(32px) 1fr;
+	-ms-grid-rows: 1fr;
+	&__number {
+		font-family: $font-main;
+		font-weight: 800;
+		margin-bottom: rem(16px);
+		font-size: rem(48px);
+		line-height: rem(58px);
+	}
+	&__title {
+		margin-bottom: rem(8px);
+		font-family: $font-main;
+		font-size: rem(20px);
+		line-height: rem(24px);
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	&__text {
+		font-size: rem(16px);
+		line-height: rem(26px);
+		opacity: 0.8;
+	}
+	&__item {
+		text-align: center;
+		overflow: hidden;
+		background: color-white(255, 255, 255, 0.2);
+		border: 1px solid $grey;
+		box-sizing: border-box;
+		border-radius: rem(16px);
+		padding: rem(24px);
+		letter-spacing: -0.02em;
+		&1 {
+			-ms-grid-column: 1;
+			-ms-grid-row: 1;
+		}
+		&2 {
+			-ms-grid-column: 3;
+			-ms-grid-row: 1;
+			margin-top: rem(32px);
+			margin-bottom: rem(-32px);
+		}
+		&3 {
+			-ms-grid-column: 5;
+			-ms-grid-row: 1;
+		}
+	}
+}
+
+// ADAPTIVE
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+	.steps-list {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		-ms-grid-columns: 1fr;
+		-ms-grid-row: 1fr rem(32px) 1fr rem(32px) 1fr;
+		&__item {
+			&1 {
+				-ms-grid-column: 1;
+				-ms-grid-row: 1;
+			}
+			&2 {
+				-ms-grid-column: 1;
+				-ms-grid-row: 3;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			&3 {
+				-ms-grid-column: 1;
+				-ms-grid-row: 5;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 539px) {
+	.section-steps__color {
+		padding: rem(32px) rem(48px);
+		&::before {
+			bottom: rem(-56px);
+			right: rem(-32px);
+		}
+	}
+}

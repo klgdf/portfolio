@@ -1,0 +1,112 @@
+@import "partials/mixins";
+@import "partials/variables";
+@import "partials/functions";
+
+.header-404 {
+	text-align: center;
+	height: auto;
+	padding: rem(56px) 0 rem(112px);
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: -12%;
+		right: 0;
+		display: block;
+		width: 35rem;
+		height: 42.5rem;
+		z-index: -1;
+		background: url(../images/benefits.png);
+		background-position-x: 0%;
+		background-position-y: 0%;
+		background-repeat: repeat;
+		background-size: auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: -20%;
+		left: 0;
+		display: block;
+		width: rem(660px);
+		height: rem(780px);
+		z-index: -1;
+		background: url(../images/background-history.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		gap: rem(8px);
+	}
+	& .page-header {
+		&__img {
+			position: unset;
+			display: block;
+			width: rem(754px);
+			height: auto;
+			margin: 0 auto rem(48px);
+			opacity: 1;
+		}
+		&__item {
+			display: block;
+		}
+		&__wrapper {
+			justify-content: center;
+			align-items: center;
+			& > div {
+				width: 100%;
+			}
+		}
+		&__title {
+			color: $text-color;
+			font-size: rem(34px);
+			font-weight: 800;
+			line-height: (50px);
+			margin-bottom: rem(16px);
+			text-transform: unset;
+		}
+		&__title,
+		&__text {
+			max-width: 100%;
+		}
+		&__text {
+			color: $text-color;
+			margin: rem(16px) 0 rem(48px);
+		}
+	}
+}
+
+// ADAPTIVE
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1063px) {
+	.header-404 {
+		.page-header {
+			&__wrapper {
+				max-width: 100%;
+			}
+			&__text {
+				margin: rem(24px) 0 rem(48px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.header-404__buttons {
+		flex-direction: column;
+		align-items: center;
+	}
+}

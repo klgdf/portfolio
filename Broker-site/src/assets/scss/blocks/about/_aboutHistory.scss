@@ -1,0 +1,49 @@
+.section-history {
+	&::after {
+		content: "";
+		position: absolute;
+		top: -20%;
+		left: 0;
+		display: block;
+		width: rem(660px);
+		height: rem(780px);
+		z-index: -1;
+		background: url(../images/background-history.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.history-list {
+	&__caption {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: rem(85px);
+		height: rem(50px);
+		background: color-third(71, 77, 218, 0.1);
+		border-radius: rem(12px);
+	}
+	&__text {
+		max-width: rem(408px);
+	}
+	&__year {
+		font-family: $font-main;
+		font-weight: 700;
+		font-size: rem(20px);
+		line-height: rem(24px);
+		letter-spacing: -0.02em;
+		color: $main-color;
+	}
+}
+
+// ADAPTIVE
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+}

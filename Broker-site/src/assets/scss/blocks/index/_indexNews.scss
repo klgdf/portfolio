@@ -1,0 +1,114 @@
+.section-news {
+	overflow: visible;
+}
+
+.news-slider {
+	position: relative;
+	& .slick-dots {
+		width: rem(300px);
+		position: relative;
+		margin: rem(32px) auto 0;
+		grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+		display: grid;
+		height: 6px;
+		background: #e6e6e6;
+		border-radius: 99px;
+		& li {
+			height: 100%;
+		}
+		& li.slick-active {
+			background: #94b4fc;
+			border-radius: 99px;
+		}
+	}
+}
+
+.news-item {
+	a {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding-right: rem(24px);
+	}
+	&__img {
+		width: 100%;
+		min-height: 100%;
+		max-height: rem(236px);
+		border-radius: rem(24px);
+		object-fit: cover;
+		background: url(../images/news.svg);
+		margin-bottom: rem(24px);
+	}
+	&__title {
+		color: $text-color;
+		font-size: rem(20px);
+		line-height: rem(26px);
+		font-weight: 700;
+		min-height: rem(76px);
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	&__btn {
+		color: $link-color;
+		font-family: $font-main;
+		font-size: rem(18px);
+		font-weight: 700;
+		line-height: rem(21px);
+		letter-spacing: -0.02em;
+		text-decoration: underline;
+		transition: 0.3 ease;
+		&:hover{
+			color: #FF7F57;
+		}
+		&:active{
+			color: #F6553F;
+		}
+	}
+	&__date {
+		width: max-content;
+		display: flex;
+		align-items: center;
+		margin: rem(16px) 0;
+		padding: rem(10px) rem(16px);
+		background: white;
+		border: 1px solid #f0f0f0;
+		box-sizing: border-box;
+		border-radius: rem(8px);
+		font-size: rem(16px);
+		line-height: rem(26px);
+		font-weight: 600;
+		letter-spacing: -2%;
+		color: text-color(28, 31, 97, 0.7);
+		& span {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__author {
+		display: block;
+		margin-bottom: rem(24px);
+	}
+}
+
+.calendar {
+	width: rem(28px);
+	height: rem(28px);
+	padding: rem(3px);
+	margin-right: rem(16px);
+	&__icon {
+		display: block;
+		width: 100%;
+	}
+}
+
+// ADAPTIVE
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+}

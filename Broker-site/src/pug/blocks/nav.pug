@@ -1,0 +1,74 @@
+nav.nav#mainNav
+	.wrapper
+		a.nav-brend(href="index.html" class=currentPage == 'index')
+			.nav-logo
+				img(src=baseDir + brandlinks.logo, alt="logo" title="logo")
+			.nav-title !{companyData.title}
+		ul.nav-list
+			li.nav-list__item.icon-arrow-menu(class={active : 
+				currentPage == "financial-instruments" || 
+				currentPage == "currencies" || 
+				currentPage == "metals" || 
+				currentPage == "stocks" || 
+				currentPage == "commodities" || 
+				currentPage == "indices" || 
+				currentPage == "cryptocurrencies"})
+				a.nav-list__link(href="financial-instruments.html")
+					span !{navText.markets[lang]}
+					.icon-menu
+						| <svg width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+						|<path d="M9 1L5 3L1 1" stroke="#393FCC" stroke-width="0.970588" stroke-linecap="round" stroke-linejoin="round"/>
+						|</svg>
+
+				.sub-nav-box
+					ul.sub-nav-list
+						li.sub-nav-list__item(class={active : currentPage == "currencies"}): a.sub-nav-list__link(href="currencies.html") !{navText.forex[lang]}
+						li.sub-nav-list__item(class={active : currentPage == "metals"}): a.sub-nav-list__link(href="metals.html") !{navText.metals[lang]}
+						li.sub-nav-list__item(class={active : currentPage == "stocks"}): a.sub-nav-list__link(href="stocks.html") !{navText.stocks[lang]}
+						li.sub-nav-list__item(class={active : currentPage == "commodities"}): a.sub-nav-list__link(href="commodities.html") !{navText.commodities[lang]}
+						li.sub-nav-list__item(class={active : currentPage == "indices"}): a.sub-nav-list__link(href="indices.html") !{navText.indices[lang]}
+						li.sub-nav-list__item(class={active : currentPage == "cryptocurrencies"}): a.sub-nav-list__link(href="cryptocurrencies.html") !{navText.crypto[lang]}
+			li.nav-list__item(class={active : currentPage == "trading-conditions"}): a.nav-list__link(href="trading-conditions.html") !{navText.trading[lang]}
+			li.nav-list__item.icon-arrow-menu(class={active : 
+				currentPage == "about-company" || 
+				currentPage == "licenses"})
+				a.nav-list__link(href="about-company.html")
+					span !{navText.about[lang]}
+					.icon-menu
+						| <svg width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+						|<path d="M9 1L5 3L1 1" stroke="#393FCC" stroke-width="0.970588" stroke-linecap="round" stroke-linejoin="round"/>
+						|</svg>
+
+				.sub-nav-box.sub-nav-about
+					ul.sub-nav-list
+						li.sub-nav-list__item(class={active : currentPage == "licenses"}): a.sub-nav-list__link(href="licenses.html") !{navText.licenses[lang]}
+			li.nav-list__item(class={active : currentPage == "contacts"}): a.nav-list__link(href="contacts.html") 
+				span !{navText.contacts[lang]}
+			li.visible-xs.btns-xs-container
+				a(href= linkLogin).btn.btn-second
+					span !{buttonText.login[lang]}
+				a(href= linkSignup).btn.btn-main
+					span !{buttonText.signup[lang]}
+		.nav-btns
+			.select-langs
+				.current-lang.icon-arrow-menu
+					span !{curLang[lang]}
+					.icon-menu
+						| <svg width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+						|<path d="M9 1L5 3L1 1" stroke="#393FCC" stroke-width="0.970588" stroke-linecap="round" stroke-linejoin="round"/>
+						|</svg>
+				.nav-langs-box
+					ul.nav-langs-list
+						li.nav-langs-list__item(class={active : lang == "en"}): a.nav-langs-list__link(href=baseDir + currentPage + ".html") En
+						li.nav-langs-list__item(class={active : lang == "ru"}): a.nav-langs-list__link(href=baseDir + "ru/" + currentPage + ".html") Ru
+						li.nav-langs-list__item(class={active : lang == "es"}): a.nav-langs-list__link(href=baseDir + "es/" + currentPage + ".html") Es
+						li.nav-langs-list__item(class={active : lang == "de"}): a.nav-langs-list__link(href=baseDir + "de/" + currentPage + ".html") De
+						li.nav-langs-list__item(class={active : lang == "fr"}): a.nav-langs-list__link(href=baseDir + "fr/" + currentPage + ".html") Fr
+						li.nav-langs-list__item(class={active : lang == "it"}): a.nav-langs-list__link(href=baseDir + "it/" + currentPage + ".html") It
+						li.nav-langs-list__item(class={active : lang == "zh"}): a.nav-langs-list__link(href=baseDir + "zh/" + currentPage + ".html") Zh
+			a(href= linkLogin).btn.btn-second.hidden-xs !{buttonText.login[lang]}
+			a(href= linkSignup).btn.btn-main.hidden-xs !{buttonText.signup[lang]}
+			#navBar.navbar-burger
+				.navbar-burger__item
+				.navbar-burger__item
+				.navbar-burger__item

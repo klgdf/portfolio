@@ -1,0 +1,14 @@
+header.form-header
+	.wrapper.form-wrapper.login-form
+		h2.h1-title !{fotmsText.titleReminder[lang]}
+		form#restore-form.main-form
+			.form-item
+				.form-item_wrapper
+					label.form-item_label.description(for="submit-email") !{formsText.labelMail[lang]}
+					input.form-item_input#submit-email(type="email" required name="email" placeholder= formsText.placeholderEmail[lang])
+			.text-center
+				button.js--repass.btn.btn-main !{buttonText.btnSend[lang]}
+		.form-links
+			a(href="login.html").form-links_item !{formsText.allreadyText[lang]}
+			a(href="registration.html").form-links_item !{buttonText.signup[lang]}
+		.help-text !{formsText.text_required[lang]}

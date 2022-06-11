@@ -1,0 +1,18 @@
+extends ../../pug/base/base
+
+append vars
+	- lang = "de"
+	- currentPage = '404'
+	- baseDir = lang == "en" ? baseDir : "../"
+	- title = titles.notFound[lang]
+	
+
+//- prepend styles (если нужно добавить ссылку на стили до базовой)
+append styles
+	link(rel="stylesheet" href=`${baseDir}assets/css/404.min.css`)
+
+block header
+	include ../../pug/blocks/404/header404.pug
+
+//- prepend scripts (если нужно добавить ссылку на стили до базовой)
+append scripts

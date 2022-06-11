@@ -1,0 +1,56 @@
+@mixin clean {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin new-font($font-name, $font-link) {
+  font-family: $font-name;
+  src: url("../fonts/#{$font-link}.eot");
+  src: url("../fonts/#{$font-link}.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/#{$font-link}.ttf") format("truetype"), url("../fonts/#{$font-link}.woff") format("woff"),
+    url("../fonts/#{$font-link}.woff2") format("woff2"), url("../fonts/#{$font-link}.svg#MyFont") format("svg");
+}
+
+@mixin new-font2($font-name, $font-link) {
+  font-family: $font-name;
+  src: url("../fonts/#{$font-link}.ttf") format("truetype"), url("../fonts/#{$font-link}.woff") format("woff"),
+    url("../fonts/#{$font-link}.woff2") format("woff2");
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+@mixin back-contain {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@mixin back-cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@mixin ma {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//ФУНКЦИИ
+
+@function px-to-em($px, $context: 16px) {
+  @return ($px / $context) * 1em;
+}
+
+@function px($px) {
+  @return $px * 0.625 / 12 + vw;
+}

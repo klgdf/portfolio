@@ -1,0 +1,26 @@
+@function rem($size) {
+	@return $size / $root-font-size * 1rem;
+}
+
+//COLORS
+@function color-main($r: 252, $g: 43, $b: 58, $a: 1) {
+	@return rgba($r, $g, $b, $a);
+}
+@function color-second($r: 40, $g: 92, $b: 226, $a: 1) {
+	@return rgba($r, $g, $b, $a);
+}
+@function text-color($r: 28, $g: 31, $b: 97, $a: 1) {
+	@return rgba($r, $g, $b, $a);
+}
+@function color-black($r: 0, $g: 0, $b: 0, $a: 1) {
+	@return rgba($r, $g, $b, $a);
+}
+@function color-gray($r: 122, $g: 122, $b: 122, $a: 1) {
+	@return rgba($r, $g, $b, $a);
+}
+@function color-white($r: 255, $g: 255, $b: 255, $a: 1) {
+	@return rgba($r, $g, $b, $a);
+}
+@function color-third($r: 71, $g: 77, $b: 218, $a: 1) {
+	@return rgba($r, $g, $b, $a);
+}

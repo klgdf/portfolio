@@ -1,0 +1,217 @@
+.section-accounts {
+	& .btn {
+		display: block;
+		width: auto;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.accounts-btn {
+	display: flex;
+	justify-content: center;
+}
+
+.accounts-list {
+	&__img {
+		display: block;
+		width: rem(64px);
+		height: rem(64px);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	&__title {
+		font-size: rem(20px);
+		line-height: rem(24px);
+		font-weight: 700;
+	}
+	&__price {
+		font-size: rem(34px);
+		line-height: rem(40px);
+		font-weight: 800;
+	}
+	&__text {
+		font-size: rem(16px);
+		line-height: rem(26px);
+		letter-spacing: -0.02em;
+		color: color-white(255, 255, 255, 0.8);
+		display: none;
+	}
+	&__text {
+		margin-top: rem(8px);
+	}
+	&__descr {
+		color: $text-color;
+		margin-left: rem(16px);
+	}
+	&__tab {
+		display: block;
+		margin-bottom: rem(24px);
+		padding: rem(24px);
+		cursor: pointer;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&1 {
+			.accounts-list__img {
+				background-image: url(../images/1account.svg);
+			}
+		}
+		&2 {
+			.accounts-list__img {
+				background-image: url(../images/2account.svg);
+			}
+		}
+		&3 {
+			.accounts-list__img {
+				background-image: url(../images/3account.svg);
+			}
+		}
+		&2 {
+			.accounts-list__head {
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0;
+					right: 0;
+					display: block;
+					width: rem(35px);
+					height: rem(35px);
+					background-image: url(../images/star.svg);
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+	&__tabs {
+		flex: 0 0 rem(456px);
+		& input {
+			display: none;
+		}
+		& input[type="radio"]:checked + label {
+			color: white;
+			border-radius: rem(24px);
+			background: $main-color;
+			padding: rem(24px) rem(24px) rem(32px);
+			& .accounts-list__text {
+				display: block;
+			}
+			& .accounts-list__descr {
+				color: white;
+			}
+			&.accounts-list__tab {
+				&2 {
+					.accounts-list__head {
+						&:before {
+							background-image: url(../images/star-active.svg);
+						}
+					}
+				}
+				&3 {
+					& .accounts-list__img {
+						background-image: url(../images/3account-active.svg);
+					}
+				}
+			}
+		}
+	}
+	&__head {
+		position: relative;
+		display: flex;
+	}
+	&__wrapper {
+		display: flex;
+		margin-bottom: rem(48px);
+	}
+	&__inner {
+		width: 100%;
+		padding-left: rem(48px);
+	}
+	&__conditions {
+		height: 100%;
+	}
+}
+
+.conditions-list {
+	color: $text-color;
+	font-weight: 400;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&__value {
+		font-size: rem(20px);
+		line-height: rem(28px);
+		font-weight: 700;
+		text-align: right;
+	}
+	&__icon {
+		display: block;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: rem(20px);
+		height: rem(20px);
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: rem(3px) 0 rem(12px);
+		border-bottom: 1px solid text-color(28, 31, 97, 0.1);
+		&.check {
+			& .conditions-list {
+				&__icon {
+					background-image: url(../images/check.png);
+				}
+				&__title {
+					color: $text-color;
+				}
+			}
+		}
+		&.none {
+			& .conditions-list {
+				&__icon {
+					background-image: url(../images/cross.svg);
+				}
+				&__title {
+					color: text-color(28, 31, 97, 0.7);
+				}
+			}
+		}
+	}
+}
+
+// ADAPTIVE
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+	.accounts-list {
+		&__tab {
+			width: 65%;
+		}
+		&__tabs {
+			margin-bottom: rem(32px);
+		}
+		&__wrapper {
+			flex-direction: column;
+		}
+		&__inner {
+			padding-left: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 539px) {
+	.accounts-list {
+		&__tab {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,2 @@
+ErrorDocument 404 /beta/de/404.html
+ErrorDocument 503 /beta/de/503.html

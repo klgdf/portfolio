@@ -1,0 +1,21 @@
+extends ../../pug/base/base
+
+append vars
+	- lang = "ru"
+	- currentPage = 'login'
+	- baseDir = lang == "en" ? baseDir : "../"
+	- title = titles.login[lang]
+
+//- prepend styles (если нужно добавить ссылку на стили до базовой)
+append styles
+	link(rel="stylesheet" href=`${baseDir}assets/css/forms.min.css`)
+
+block header
+	include ../../pug/blocks/forms/loginForm.pug
+
+block content
+	include ../../pug/blocks/forms/info.pug
+	include ../../pug/blocks/forms/twoAuthForm.pug
+
+//- append scripts (если нужно добавить ссылку на скрипты после базовой)
+prepend scripts

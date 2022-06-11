@@ -1,0 +1,31 @@
+.section-assets {
+	&__item{
+		background: $main-color;
+		color: white;
+		text-align: center;
+		padding: rem(48px) 0;
+		border-radius: rem(24px);
+	}
+	&__title{
+		color: white;
+		margin-bottom: rem(16px);
+	}
+	&__text{
+		max-width: rem(480px);
+		margin: 0 auto;
+	}
+}
+
+
+// ADAPTIVE
+@media screen and (max-width: 1280px) {}
+
+@media screen and (max-width: 1023px) {}
+
+@media screen and (max-width: 767px) {
+	.section-assets{
+		&__item{
+			padding: rem(32px) rem(48px);
+		}
+	}
+}

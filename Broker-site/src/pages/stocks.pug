@@ -1,0 +1,29 @@
+extends ../pug/base/base
+
+//- mixins 
+include ../pug/mixins/marketHeaderMixin.pug
+include ../pug/mixins/marketProfitsMixin.pug
+include ../pug/mixins/marketAssetsMixin.pug
+include ../pug/mixins/marketQuotesMixin.pug
+
+append vars
+	- lang = "en"
+	- currentPage = 'stocks'
+	- baseDir = lang == "en" ? baseDir : "../"
+	- title = titles.stocks[lang]
+
+//- prepend styles (если нужно добавить ссылку на стили до базовой)
+append styles
+	link(rel="stylesheet" href=`${baseDir}assets/css/markets.min.css`)
+
+block header
+	+marketHeader(stocksHeaderText, "stocks-header")
+
+block content
+	+marketProfits(stocksProfitsText, "stocks")
+	+marketAssets(stocksAssetsText)
+	+marketQuotes("stocks")
+
+//- append scripts (если нужно добавить ссылку на скрипты после базовой)
+prepend scripts
+	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>

@@ -1,0 +1,71 @@
+//- -
+	//- var googleFonts = 'https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&family=Open+Sans:wght@400;600;700&display=swap'
+-
+	var linkLogin = companyData.loginpage
+	var linkSignup = companyData.registratepage
+-
+	var baseDir = ''
+-
+	var currentPage = ''
+-
+	var lang = typeof lang !== 'undefined' ? lang : defaultLanguage
+	var html = {
+		classList: []
+	}
+-
+	var body = {
+		attrs: {},
+		classList: []
+	}
+-
+	var title = typeof title !== 'undefined' ? title : null
+	var description = typeof description !== 'undefined' ? description : null
+	var image = typeof image !== 'undefined' ? image : null
+
+-
+	var realLocale = seolocales.siteLocale[lang]
+-
+	var meta = {
+		appleMobileWebAppCapable: null,
+		appleMobileWebAppStatusBarStyle: null,
+		appleMobileWebAppTitle: null,
+		appleTouchFullscreen: null,
+		applicationName: null,
+		charset: 'utf-8',
+		description: description,
+		formatDetection: {
+			address: true,
+			date: true,
+			email: true,
+			telephone: true
+		},
+		keywords: [],
+		msapplicationTileColor: null,
+		msapplicationTileImage: null,
+		msapplicationNotification: null,
+		msapplicationSquare70x70logo: null,
+		msapplicationSquare150x150logo: null,
+		msapplicationSquare310x310logo: null,
+		msapplicationWide310x150logo: null,
+		ogDescription: description,
+		ogImage: image,
+		ogImageType: null,
+		ogImageWidth: null,
+		ogImageHeight: null,
+		ogImageAlt: null,
+		ogLocale: realLocale,
+		ogTitle: title,
+		ogType: 'website',
+		ogUrl: null,
+		themeColor: null,
+		twitterCard: 'summary_large_image',
+		twitterSite: null,
+		twitterCreator: null,
+		twitterTitle: title,
+		twitterDescription: description,
+		twitterImage: image,
+		viewport: 'width=device-width',
+		XUACompatible: 'IE=edge'
+	}
+-
+	var pugDir = lang == defaultLanguage ? '../' : '../../'

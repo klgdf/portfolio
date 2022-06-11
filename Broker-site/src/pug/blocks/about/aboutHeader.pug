@@ -1,0 +1,20 @@
+header.page-header.about-header
+	.page-header__box_1
+		img.page-header__img(src=baseDir + ["assets/images/about-header.png"] alt="about-header" title="about-header")
+		.page-header__box_2
+			.wrapper
+				.page-header__item
+					.page-header__wrapper
+						.page-header__info
+							h1.page-header__title.h1-title !{aboutHeaderText.title[lang]}
+							.page-header__description
+								.page-header__rect
+								p.page-header__text.description !{aboutHeaderText.text[lang]}
+							a(href=linkSignup).btn.btn-white.btn-big !{buttonText.btnStartTrade[lang]}
+						-let delayValueCounter = 150;
+							.counter-list
+								-for(let i = 1; i < 6; i++)
+									.counter-list__item(data-aos="fade-up" data-aos-delay="" + delayValueCounter)
+										h3.counter-list__title.h2-title !{aboutCounterText["counter"+i].title[lang]}
+										p.counter-list__text !{aboutCounterText["counter"+i].text[lang]}
+									-delayValueCounter +=150

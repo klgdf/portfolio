@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="64" height="64" rx="15.36" fill="#E3E3E3"/>
+<circle opacity="0.15" cx="51.5" cy="12.5" r="20.5" fill="#1C1F61"/>
+<rect opacity="0.15" x="-6" y="33" width="32" height="32" fill="#1C1F61"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="64" height="64" rx="15.36" fill="white"/>
+</clipPath>
+</defs>
+</svg>

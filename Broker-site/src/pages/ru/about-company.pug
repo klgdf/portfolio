@@ -1,0 +1,27 @@
+extends ../../pug/base/base
+
+//- mixins 
+include ../../pug/mixins/aboutRowMixin.pug
+
+append vars
+	- lang = "ru"
+	- currentPage = 'about-company'
+	- baseDir = lang == "en" ? baseDir : "../"
+	- title = titles.about[lang]
+
+//- prepend styles (если нужно добавить ссылку на стили до базовой)
+append styles
+	link(rel="stylesheet" href=`${baseDir}assets/css/about.min.css`)
+
+block header
+	include ../../pug/blocks/about/aboutHeader.pug
+
+block content
+	+aboutRow(aboutConditionsText, "quality")
+	include ../../pug/blocks/about/aboutGoals.pug
+	+aboutRow(aboutQualityText, "maximum")
+	include ../../pug/blocks/about/aboutHistory.pug
+	include ../../pug/blocks/about/aboutPlatform.pug
+
+//- prepend scripts (если нужно добавить ссылку на стили до базовой)
+append scripts

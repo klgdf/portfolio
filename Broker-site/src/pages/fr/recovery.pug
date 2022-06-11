@@ -1,0 +1,20 @@
+extends ../../pug/base/base
+
+append vars
+	- lang = "fr"
+	- currentPage = 'recovery'
+	- baseDir = lang == "en" ? baseDir : "../"
+	- title = titles.reminder[lang]
+
+//- prepend styles (если нужно добавить ссылку на стили до базовой)
+append styles
+	link(rel="stylesheet" href=`${baseDir}assets/css/forms.min.css`)
+
+block header
+	include ../../pug/blocks/forms/recoveryForm.pug
+
+block content
+	include ../../pug/blocks/forms/info.pug
+
+//- append scripts (если нужно добавить ссылку на скрипты после базовой)
+prepend scripts

@@ -1,0 +1,313 @@
+.scene,
+.main-decor {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.scroll-decor {
+    position: absolute !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    img {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.header-decor_tl {
+    background-image: url("../images/header-decor-tl.svg");
+    width: rem(176px);
+    height: rem(209px);
+    top: -31px !important;
+    left: -22px !important;
+}
+
+.header-decor_tr {
+    background-image: url("../images/header-decor-tr.svg");
+    width: rem(305px);
+    height: rem(429px);
+    top: -76px !important;
+    left: auto !important;
+    right: -93px !important;
+}
+
+.header-decor_tr-sm {
+    background-image: url("../images/header-decor-tr-sm.svg");
+    width: rem(72px);
+    height: rem(72px);
+    right: 11px !important;
+    left: auto !important;
+    top: 143px !important;
+    animation: spin 3s linear infinite;
+}
+
+.header-decor_bl {
+    background-image: url("../images/header-decor-bl.svg");
+    width: rem(415px);
+    height: rem(295px);
+    left: -137px !important;
+    bottom: -60px !important;
+    top: auto !important;
+    // animation: spin 4s linear infinite;
+}
+
+.header-decor_br {
+    background-image: url("../images/header-decor-br.svg");
+    width: rem(82px);
+    height: rem(145px);
+    right: -23px !important;
+    left: auto !important;
+    bottom: 69px !important;
+    top: auto !important;
+    // animation: spin 4s linear infinite;
+}
+
+.header-decor_bl-sm {
+    background-image: url("../images/header-decor-bl-sm.svg");
+    width: rem(91px);
+    height: rem(96px);
+    left: rem(40px) !important;
+    bottom: rem(-26px) !important;
+    top: auto !important;
+    animation: spin 4s linear infinite;
+}
+
+.account-decor_cc {
+    background-image: url("../images/account-decor_cc.svg");
+    width: rem(315px);
+    height: rem(300px);
+    left: rem(-155px) !important;
+    bottom: rem(60px) !important;
+    top: auto !important;
+    animation: spin-rev 4s linear infinite;
+}
+
+.estimation-decor_tr {
+    background-image: url("../images/estimation-decor_tr.svg");
+    width: rem(417px);
+    height: rem(425px);
+    left: auto !important;
+    right: rem(-85px) !important;
+    top: rem(140px) !important;
+    animation: spin-rev 7s linear infinite;
+}
+
+.estimation-decor_tl {
+    background-image: url("../images/estimation-decor_tl.svg");
+    width: rem(495px);
+    height: rem(496px);
+    left: -4% !important;
+    top: 9% !important;
+    max-width: 32%;
+    animation: spin 7s linear infinite;
+}
+
+.estimation-decor_br {
+    background-image: url("../images/estimation-decor_br.svg");
+    width: rem(701px);
+    height: rem(754px);
+    left: auto !important;
+    right: 4%!important;
+    top: auto!important;
+    max-width: 48%;
+    top: auto !important;
+    bottom: -1% !important;
+    animation: spin-rev 12s linear infinite;
+}
+
+.account-decor_tl {
+    background-image: url("../images/account-decor_tl.svg");
+    width: rem(316px);
+    height: rem(136px);
+    left: auto !important;
+    top: 0 !important;
+    right: rem(-30px) !important;
+}
+
+.account-decor_br {
+    background-image: url("../images/account-decor_br.svg");
+    width: rem(338px);
+    height: rem(364px);
+    left: rem(195px) !important;
+    bottom: 0px !important;
+    top: auto !important;
+    animation: spin 4s linear infinite;
+}
+
+.account-decor_bc {
+    background-image: url("../images/account-decor_bc.svg");
+    width: rem(443px);
+    height: rem(188px);
+    left: rem(-118px) !important;
+    top: 0 !important;
+}
+
+.advantages-decor_tl {
+    background-image: url("../images/advantages-decor_tl.svg");
+    width: rem(446px);
+    height: rem(463px);
+    max-width: 24%;
+    left: 5% !important;
+    top: 25% !important;
+    animation: spin 8s linear infinite;
+}
+
+.licenses-decor_tr {
+    background-image: url("../images/licenses-decor_tr.svg");
+    width: rem(847px);
+    height: rem(760px);
+    left: auto !important;
+    right: -18%!important;
+    top: 15%!important;
+    max-width: 46%;
+    animation: spin 8s linear infinite;
+}
+
+.popup-decor_tl {
+    background-image: url("../images/popup-decor_tl.svg");
+    width: rem(100px);
+    height: rem(99px);
+    left: -30px !important;
+    top: 44px!important;
+    animation: spin 4s linear infinite;
+}
+
+.popup-decor_cc {
+    background-image: url("../images/account-decor_br.svg");
+    width: rem(170px);
+    height: rem(185px);
+    left: -3%!important;
+    top: auto!important;
+    bottom: -6%!important;
+    animation: spin-rev 4s linear infinite;
+}
+
+.licenses-decor_bl {
+    background-image: url("../images/licenses-decor_bl.svg");
+    width: rem(630px);
+    height: rem(620px);
+    left: -11%!important;
+    top: 51%!important;
+    max-width: 33%;
+    animation: spin-rev 5s linear infinite;
+}
+
+.table-decor_tl {
+    background-image: url("../images/table-decor_tl.svg");
+    width: rem(490px);
+    height: rem(509px);
+    max-width: 26%;
+    left: 18px !important;
+    top: 18% !important;
+    animation: spin 8s linear infinite;
+}
+
+.graph-decor_br {
+    background-image: url("../images/graph-decor_br.svg");
+    width: rem(428px);
+    height: rem(437px);
+    max-width: 26%;
+    left: auto !important;
+    right: 44px !important;
+    top: auto !important;
+    bottom: 43px !important;
+    animation: spin-rev 6s linear infinite;
+}
+
+.advantages-decor_cc {
+    background-image: url("../images/advantages-decor_cc.svg");
+    transform: rotateX(124deg);
+    width: rem(602px);
+    height: rem(602px);
+    max-width: 32%;
+    left: 26% !important;
+    top: 37% !important;
+    animation: spin-rev 6s linear infinite;
+}
+
+.advantages-decor_br {
+    background-image: url("../images/advantages-decor_br.svg");
+    width: rem(722px);
+    height: rem(777px);
+    max-width: 38%;
+    left: auto !important;
+    right: 3% !important;
+    top: auto !important;
+    bottom: 0 !important;
+    animation: spin 13s linear infinite;
+}
+
+.benefits-decor_bl {
+    // background-image: url("../images/benefit-decor_bl.svg");
+    width: rem(343px);
+    // height: rem(244px);
+    max-width: 21%;
+    left: 20% !important;
+    top: auto !important;
+    bottom: -5px !important;
+    // animation: spin 5s linear infinite;
+}
+
+.goals-decor_bl {
+    // background-image: url("../images/benefit-decor_bl.svg");
+    width: rem(343px);
+    // height: rem(244px);
+    max-width: 21%;
+    left: 2% !important;
+    top: auto !important;
+    bottom: -5px !important;
+    // animation: spin 5s linear infinite;
+}
+
+.history-decor_bl {
+    width: rem(283px);
+    max-width: 26%;
+    left: -4% !important;
+    top: auto !important;
+    bottom: 20px !important;
+    // animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-rev {
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes move-the-circle {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, 10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

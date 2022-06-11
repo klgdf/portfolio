@@ -1,0 +1,24 @@
+
+section.section.section-history
+	.section-history-wrapper
+		.wrapper
+			h2.h2-title !{aboutHistoryText.h2[lang]}
+			.history-list
+				-for(let i = 1; i < 5; i++)
+					.history-list__item(class=["history-list__item"+i] data-aos="fade-up")
+						.history-list__row
+							h3.h3-title.subtitle !{aboutHistoryText["year"+i].title[lang]}
+							if i == 1 
+								.history-list__caption
+									.history-list__year 2018
+							else if i == 2
+								.history-list__caption
+									.history-list__year 2019
+							else if i == 3
+								.history-list__caption
+									.history-list__year 2020
+							else if i == 4
+								.history-list__caption
+									.history-list__year 2021
+						p.history-list__text.description !{aboutHistoryText["year"+i].text[lang]}
+					-delayValueHistory += 150

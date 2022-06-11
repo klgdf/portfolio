@@ -1,0 +1,117 @@
+block vars
+	include vars.pug
+
+- var baseDir = lang == defaultLanguage ? baseDir : "../"
+- var canonical = currentPage !== null && seo ? currentPage+".html" : null
+
+doctype html
+if lang != defaultLanguage
+html(lang= lang)
+	head
+		block meta
+			if meta.robots !== null && !seo
+				meta(name="robots" content="noindex, nofollow")
+			if meta.charset !== null
+				meta(charset=meta.charset)
+			if meta.XUACompatible !== null
+				meta(http-equiv="X-UA-Compatible" content=meta.XUACompatible)
+			if meta.viewport !== null
+				meta(name="viewport" content=meta.viewport)
+			if meta.description !== null
+				meta(name="description" content=meta.description)
+			if canonical !== null && seo
+				link(rel="canonical" href=canonical)
+			if meta.keywords !== null && !(Array.isArray(meta.keywords) && !meta.keywords.length)
+				meta(name="keywords" content=(Array.isArray(meta.keywords) ? meta.keywords.join(', ') : meta.keywords))
+			if meta.ogType !== null && (meta.ogUrl || meta.ogTitle || meta.ogDescription || meta.ogImage)
+				meta(property="og:type" content=meta.ogType)
+			if meta.ogUrl !== null
+				meta(property="og:url" content=meta.ogUrl)
+			if meta.ogLocale !== null && (meta.ogUrl || meta.ogTitle || meta.ogDescription || meta.ogImage)
+				meta(property="og:locale" content=meta.ogLocale)
+			if meta.ogTitle !== null
+				meta(property="og:title" content=meta.ogTitle)
+			if meta.ogDescription !== null
+				meta(property="og:description" content=meta.ogDescription)
+			if meta.ogImage !== null
+				meta(property="og:image" content=meta.ogImage)
+			if meta.ogImageType !== null
+				meta(property="og:image:type" content=meta.ogImageType)
+			if meta.ogImageWidth !== null
+				meta(property="og:image:width" content=meta.ogImageWidth)
+			if meta.ogImageHeight !== null
+				meta(property="og:image:height" content=meta.ogImageHeight)
+			if meta.ogImageAlt !== null
+				meta(property="og:image:alt" content=meta.ogImageAlt)
+			if meta.twitterCard !== null && (meta.twitterSite || meta.twitterCreator || meta.twitterTitle || meta.twitterDescription || meta.twitterImage)
+				meta(name="twitter:card" content=meta.twitterCard)
+			if meta.twitterSite !== null
+				meta(name="twitter:site" content=meta.twitterSite)
+			if meta.twitterCreator !== null
+				meta(name="twitter:creator" content=meta.twitterCreator)
+			if meta.twitterTitle !== null
+				meta(name="twitter:title" content=meta.twitterTitle)
+			if meta.twitterDescription !== null
+				meta(name="twitter:description" content=meta.twitterDescription)
+			if meta.twitterImage !== null
+				meta(name="twitter:image" content=meta.twitterImage)
+			if meta.appleMobileWebAppCapable !== null
+				meta(name="apple-mobile-web-app-capable" content=meta.appleMobileWebAppCapable)
+			if meta.appleMobileWebAppStatusBarStyle !== null
+				meta(name="apple-mobile-web-app-status-bar-style" content=meta.appleMobileWebAppStatusBarStyle)
+			if meta.appleMobileWebAppTitle !== null
+				meta(name="apple-mobile-web-app-title" content=meta.appleMobileWebAppTitle)
+			if meta.applicationName !== null
+				meta(name="application-name" content=meta.applicationName)
+			if meta.msapplicationTileColor !== null
+				meta(name="msapplication-TileColor" content=meta.msapplicationTileColor)
+			if meta.msapplicationTileImage !== null
+				meta(name="msapplication-TileImage" content=meta.msapplicationTileImage)
+			if meta.msapplicationSquare70x70logo !== null
+				meta(name="msapplication-square70x70logo" content=meta.msapplicationSquare70x70logo)
+			if meta.msapplicationSquare150x150logo !== null
+				meta(name="msapplication-square150x150logo" content=meta.msapplicationSquare150x150logo)
+			if meta.msapplicationWide310x150logo !== null
+				meta(name="msapplication-wide310x150logo" content=meta.msapplicationWide310x150logo)
+			if meta.msapplicationSquare310x310logo !== null
+				meta(name="msapplication-square310x310logo" content=meta.msapplicationSquare310x310logo)
+			if meta.msapplicationNotification !== null
+				meta(name="msapplication-notification" content=meta.msapplicationNotification)
+			if meta.themeColor !== null
+				meta(name="theme-color" content=meta.themeColor)
+			if meta.formatDetection !== null && (typeof meta.formatDetection === 'string' || Object.values(meta.formatDetection).some(function (value) { return !value }))
+				meta(name="format-detection" content=(typeof meta.formatDetection === 'string' ? meta.formatDetection : Object.entries(meta.formatDetection).filter(function (entry) { return !entry[1] || entry[1] === 'no' }).map(function (entry) { return `${entry[0]}=no` }).join(',')))
+		if lang !== null && seo
+			- for (var i=0; i<seolocales.alternatives.length; i++)
+				if seolocales.alternatives[i] !== lang
+					if seolocales.alternatives[i] == defaultLanguage
+						link(rel="alternative" href='/'+currentPage+'.html' hreflang=seolocales.siteLocale[seolocales.alternatives[i]])
+					else
+						link(rel="alternative" href='/'+seolocales.alternatives[i]+'/'+currentPage+'.html' hreflang=seolocales.siteLocale[seolocales.alternatives[i]])
+		if seo
+			link(rel=sitemapfile.rel type="application/xml" title=sitemapfile.rel href=`/${sitemapfile.rel}.xml`)
+			script(type="application/ld+json" src=`${baseDir}assets/json/base/ld-json/organization.json`)
+			script(type="application/ld+json" src=`${baseDir}assets/json/base/ld-json/website.json`)
+		if title !== null
+			title= title
+		if link !== null
+			link(rel="icon" href=`${baseDir}${brandlinks.favicon}` sizes="32x32")
+		block styles
+			link(rel="stylesheet" href=`${baseDir}assets/css/main.min.css?v=${Date.now()}`)
+		block fonts
+			if googleFonts
+				link(href=googleFonts rel="stylesheet")
+				<!--[if IE 11]>
+					link(rel="stylesheet" href=`${baseDir}assets/css/ie11.css?v=${Date.now()}`)
+				<![endif]-->
+	body(class=body.classList)&attributes(body.attrs)
+		block nav
+			include ../blocks/nav.pug
+		block header
+		main
+			block content
+		block footer
+			include ../blocks/footer.pug
+		block scripts
+			script(src=`${baseDir}assets/js/` + build.links.build.output.js.vendor + `.js?v=${Date.now()}`)
+			script(src=`${baseDir}assets/js/` + build.links.build.output.js.main + `.js?v=${Date.now()}`)

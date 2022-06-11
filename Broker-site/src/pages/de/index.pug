@@ -1,0 +1,24 @@
+extends ../../pug/base/base
+
+append vars
+	- lang = "de"
+	- currentPage = 'index'
+	- baseDir = lang == "en" ? baseDir : "../"
+	- title = titles.index[lang]
+
+//- prepend styles (если нужно добавить ссылку на стили до базовой)
+append styles
+	link(rel="stylesheet" href=`${baseDir}assets/css/index.min.css`)
+
+block header
+	include ../../pug/blocks/index/indexHeader.pug
+
+block content
+	include ../../pug/blocks/index/indexAdvantages.pug
+	include ../../pug/blocks/index/indexSteps.pug
+	include ../../pug/blocks/index/indexBenefits.pug
+	include ../../pug/blocks/index/indexNews.pug
+	include ../../pug/blocks/index/indexAccounts.pug
+
+//- prepend scripts (если нужно добавить ссылку на скрипты до базовой)
+append scripts

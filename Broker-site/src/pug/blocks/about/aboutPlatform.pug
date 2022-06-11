@@ -1,0 +1,16 @@
+section.section.section-platform
+	.wrapper
+		.section-platform__wrapper
+			.section-platform__item
+				.section-platform__img(data-aos="fade-up")
+					img(src=baseDir + ["assets/images/platform.png"] alt="quality" title="quality")
+				.section-platform__description
+					h2.section-platform__title.h2-title !{aboutPlatformText.title[lang]}
+					p.section-platform__text.description !{aboutPlatformText.text[lang]}
+					a(href=linkSignup).btn.btn-big.btn-main !{buttonText.btnStartTrade[lang]}
+			ul.platform-list
+				-for(let i = 1; i < 8; i++)
+					li.platform-list__item(class=["platform-list__item"+i] data-aos="fade-left")
+						p.platform-list__text !{aboutPlatformText["advantage"+i][lang]}
+						img.platform-list__img(src=baseDir + ["assets/images/"+i+"quality.svg"] alt="quality" title="quality")
+

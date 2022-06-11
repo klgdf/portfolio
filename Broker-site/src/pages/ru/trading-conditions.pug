@@ -1,0 +1,22 @@
+extends ../../pug/base/base
+
+append vars
+	- lang = "ru"
+	- currentPage = 'trading-conditions'
+	- baseDir = lang == "en" ? baseDir : "../"
+	- title = titles.trading[lang]
+
+//- prepend styles (если нужно добавить ссылку на стили до базовой)
+append styles
+	link(rel="stylesheet" href=`${baseDir}assets/css/trading.min.css`)
+
+block header
+	include ../../pug/blocks/trading/tradingHeader.pug
+
+block content
+	include ../../pug/blocks/index/indexAccounts.pug
+	include ../../pug/blocks/trading/tradingCalculator.pug
+	include ../../pug/blocks/index/indexSteps.pug
+
+//- prepend scripts (если нужно добавить ссылку на скрипты до базовой)
+append scripts

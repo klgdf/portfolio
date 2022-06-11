@@ -1,0 +1,10 @@
+mixin aboutRow(descr, image)
+	section.section.section-quality
+		.wrapper
+			.section-quality__item
+				.section-quality__img(data-aos="fade-up")
+					img(src=baseDir + ["assets/images/"+image+".png"] alt="quality" title="quality")
+				.section-quality__description
+					h2.section-quality__title.h2-title !{descr.title[lang]}
+					p.section-quality__text.description !{descr.text[lang]}
+					a(href=linkSignup).btn.btn-big.btn-main !{buttonText.btnStartTrade[lang]}

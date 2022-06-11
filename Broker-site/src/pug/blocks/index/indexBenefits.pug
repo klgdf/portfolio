@@ -1,0 +1,12 @@
+
+section.section.section-benefits
+	.section-benefits-wrapper
+		.wrapper
+			h2.h2-title !{indexBenefitsText.h2[lang]}
+			.benefits-list
+				-for(let i = 1; i < 5; i++)
+					.benefits-list__item(class=["benefits-list__item"+i] data-aos="fade-up")
+						.benefits-list__row
+							h3.h3-title.subtitle !{indexBenefitsText["benefit"+i].title[lang]}
+							img.benefits-list__img(src=baseDir + ["assets/images/"+i+"benefit.svg"] alt="benefit" title="benefit")
+						p.benefits-list__text.description !{indexBenefitsText["benefit"+i].text[lang]}

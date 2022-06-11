@@ -1,0 +1,19 @@
+
+header.main-header
+	.main-slider
+		-for(let i = 1; i < 5; i++)
+			.main-slider__box_1
+				img.main-slider__img(src=baseDir + ["assets/images/"+i+"main-slider.png"] alt="main-slider" title="main-slider")
+				.main-slider__box_2
+					.wrapper
+						.main-slider__item(class=["main-slider__item"+i])
+							.main-slider__wrapper
+								if i == 1
+									h1.main-slider__title.h1-title !{indexHeaderText["slide"+i].title[lang]}
+								else
+									.main-slider__title.h1-title !{indexHeaderText["slide"+i].title[lang]}
+								.main-slider__description
+									.main-slider__rect
+									p.main-slider__text.description !{indexHeaderText["slide"+i].text[lang]}
+								a(href=linkSignup).btn.btn-main.btn-big !{buttonText.btnStartTrade[lang]}
+

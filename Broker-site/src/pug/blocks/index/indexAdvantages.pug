@@ -1,0 +1,14 @@
+
+section.section.section-advantages
+	-let delayValueAdvantages = 300;
+		.wrapper
+			h2.h2-title !{indexAdvantagesText.h2[lang]}
+			.advantages-list
+				-for(let i = 1; i < 7; i++)
+					.advantages-list__wrapper(class=["advantages-list__wrapper" + i] data-aos="fade-up" data-aos-delay="" + delayValueAdvantages)
+						.advantages-list__item
+							.advantages-list__row
+								img.advantages-list__img(src=baseDir + ["assets/images/"+i+"advantage.svg"] alt="advantage")
+								h3.advantages-list__title.h3-title.subtitle !{indexAdvantagesText["advantage"+i].title[lang]}
+							p.advantages-list__text.description !{indexAdvantagesText["advantage"+i].text[lang]}
+						-  delayValueAdvantages == 600 ? delayValueAdvantages = 300 : delayValueAdvantages += 150

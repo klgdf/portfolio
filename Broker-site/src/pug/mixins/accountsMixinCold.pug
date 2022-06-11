@@ -1,0 +1,29 @@
+.accounts-list__wrapper
+	.accounts-list__tabs(data-aos="fade-up")
+		-for(let i = 1; i < 4; i++)
+			if i == 2
+				input(type="radio" name="account" value="account"+i id="account"+i checked)
+			else 
+				input(type="radio" name="account" value="account"+i id="account"+i )
+			label.accounts-list__tab(for="account"+i class="accounts-list__tab"+i)
+				.accounts-list__head
+					.accounts-list__img
+					.accounts-list__descr
+						h3.accounts-list__title !{indexAccountsText["account"+i].title[lang]}
+						if i == 1
+							.accounts-list__price $1 000
+						if i == 2
+							.accounts-list__price $25 000
+						if i == 3
+							.accounts-list__price $50 000
+				p.accounts-list__text !{indexAccountsText["account"+i].text[lang]}
+	.accounts-list__inner(data-aos="fade-up")
+		-for(let i = 1; i < 4; i++)
+			if i == 2
+				.accounts-list__conditions(class="accounts-list__conditions"+i)
+					include ../blocks/index/list-conditions.pug
+			else
+				.accounts-list__conditions.hidden(class="accounts-list__conditions"+i)
+					include ../blocks/index/list-conditions.pug
+.accounts-btn
+	a(href=linkSignup).btn.btn-main.btn-big !{buttonText.btnStartTrade[lang]} 
