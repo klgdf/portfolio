@@ -1,6 +1,0 @@
-{
-    "@context":"http://schema.org",
-    "@type":"WebSite", 
-    "name": "{title}",
-    "url": "{url}"                
-}
